@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>اكتشف مسارك · رؤية 2030</title>
+<meta name="description" content="اختبار تفاعلي لاكتشاف المسار المهني الأنسب لك بين 6 قطاعات رؤية 2030.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-stage">
+  <div class="bg-grad"></div>
+  <video class="bg-video" id="bgVideoMain" muted loop playsinline preload="metadata"></video>
+  <div class="bg-tint" id="bgTint"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<div class="particles" id="particles"></div>
+
+<div class="app">
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-mark">ر</div>
+      <div class="logo-text">رؤية <span>2030</span></div>
+    </div>
+    <div class="lang-toggle" role="group">
+      <button class="lang-btn" id="langAr" aria-pressed="true" type="button">ع</button>
+      <button class="lang-btn" id="langEn" aria-pressed="false" type="button">E</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="screen active" id="screen-start">
+      <div class="badge-row">
+        <div class="badge"><span class="dot"></span> <span data-i18n="b1">10 أسئلة</span></div>
+        <div class="badge"><span class="dot"></span> <span data-i18n="b2">+ سؤال منطقتك</span></div>
+        <div class="badge"><span class="dot"></span> <span data-i18n="b3">دليل مسار كامل</span></div>
+      </div>
+      <h1 class="hero-title" data-i18n="heroTitle">اكتشف مسارك المستقبلي</h1>
+      <p class="hero-sub" data-i18n="heroSub">6 قطاعات تقود رؤية 2030. أجب بصدق، حدّد منطقتك، واحصل على دليل مخصص بالفرص والبرامج.</p>
+      <div class="mosaic" id="mosaic"></div>
+      <div class="stats">
+        <div class="stat"><b id="s1">0</b><small data-i18n="s1">قطاعات</small></div>
+        <div class="stat"><b id="s2">0</b><small data-i18n="s2">أسئلة</small></div>
+        <div class="stat"><b id="s3">0</b><small data-i18n="s3">ثانية</small></div>
+      </div>
+      <button class="cta" id="startBtn" type="button">
+        <span data-i18n="startBtn">ابدأ الرحلة</span><span>←</span>
+      </button>
+      <p class="meta" data-i18n="meta">بدون تسجيل · بدون بيانات شخصية</p>
+      <div class="last-banner" id="lastBanner" hidden>
+        <span class="spot"></span><span id="lastText"></span>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-quiz">
+      <div class="quiz-head">
+        <div class="ring">
+          <svg viewBox="0 0 64 64">
+            <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#00664A"/><stop offset="1" stop-color="#D4A017"/>
+            </linearGradient></defs>
+            <circle class="track" cx="32" cy="32" r="28"/>
+            <circle class="progress" id="ringProgress" cx="32" cy="32" r="28"/>
+          </svg>
+          <div class="ring-num"><span id="ringNum">1</span><small>/10</small></div>
+        </div>
+        <div class="quiz-meta">
+          <div class="step" id="stepLabel"></div>
+          <div class="cheer" id="cheer"></div>
+        </div>
+      </div>
+      <div class="q-card" id="qCard">
+        <h2 class="q-text" id="qText"></h2>
+        <div class="options" id="options"></div>
+      </div>
+      <button class="back" id="backBtn" type="button" data-i18n="backBtn">↩ رجوع</button>
+    </section>
+
+    <section class="screen" id="screen-region">
+      <div class="quiz-head">
+        <div class="ring">
+          <svg viewBox="0 0 64 64">
+            <circle class="track" cx="32" cy="32" r="28"/>
+            <circle class="progress" cx="32" cy="32" r="28" style="stroke-dashoffset:0"/>
+          </svg>
+          <div class="ring-num"><span>✓</span></div>
+        </div>
+        <div class="quiz-meta">
+          <div class="step" data-i18n="regionStep">الخطوة الأخيرة</div>
+          <div class="cheer" data-i18n="regionCheer">وين تشوف نفسك؟ 🗺️</div>
+        </div>
+      </div>
+      <div class="q-card">
+        <h2 class="q-text" data-i18n="regionTitle">اختر المنطقة اللي تحب تشتغل وتعيش فيها:</h2>
+        <div class="region-grid" id="regionGrid"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-result">
+      <div class="reveal-ring" id="revealRing" hidden></div>
+      <div class="result-card">
+        <div class="result-visual">
+          <video id="rVideo" muted loop playsinline preload="metadata" style="display:none"></video>
+          <img id="rImg" alt="">
+          <div class="result-visual-text">
+            <span class="eyebrow" data-i18n="eyebrow">القطاع الأنسب لك</span>
+            <h2 class="result-title" id="rTitle"></h2>
+            <div class="tagline" id="rTagline"></div>
+          </div>
+        </div>
+        <div class="result-body">
+          <p class="desc" id="rDesc"></p>
+          <div class="sec-title" data-i18n="careersTitle">أمثلة على الوظائف</div>
+          <div class="chips" id="rChips"></div>
+          <div class="runner" id="rRunner" hidden></div>
+          <button class="discover-cta" id="discoverBtn" type="button" data-i18n="discover">اكتشف مسارك الكامل</button>
+          <div class="actions">
+            <button class="btn btn-primary" id="retakeBtn" type="button" data-i18n="retake">جولة أخرى</button>
+            <button class="btn btn-ghost" id="copyBtn" type="button" data-i18n="share">تحميل نتيجتي</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-i18n="footer">مستوحى من رؤية السعودية 2030 · تجربة استكشافية</footer>
+</div>
+
+<div class="guide-page" id="guidePage">
+  <button class="guide-close" id="guideClose" type="button">✕</button>
+  <div class="guide-inner" id="guideInner"></div>
+  <button class="sticky-bar" id="stickyBar" type="button">
+    <span class="txt" id="stickyTxt"></span>
+    <span class="go-btn" id="stickyGo"></span>
+  </button>
+</div>
+
+<div class="confetti" id="confetti"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
