@@ -226,12 +226,15 @@ main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:1
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 .btn:disabled{opacity:.6;cursor:wait}
 
-.guide-page{position:fixed;inset:0;z-index:200;background:rgba(7,16,12,.97);
-  backdrop-filter:blur(30px);overflow-y:auto;
-  opacity:0;transform:translateY(40px);
-  transition:opacity .7s var(--ease),transform .7s var(--ease);pointer-events:none}
-.guide-page.active{opacity:1;transform:none;pointer-events:auto}
-.guide-inner{max-width:700px;margin:0 auto;padding:64px 22px 120px}
+.guide-page{position:fixed;inset:0;z-index:200;background:rgba(7,16,12,.55);
+  backdrop-filter:blur(8px);overflow:hidden;
+  opacity:0;transition:opacity .35s var(--ease);pointer-events:none}
+.guide-page.active{opacity:1;pointer-events:auto}
+.guide-inner{position:absolute;inset-block:0;inset-inline-end:0;width:min(760px,92vw);
+  max-width:none;overflow-y:auto;margin:0;padding:64px 22px 120px;
+  background:rgba(7,16,12,.98);box-shadow:-18px 0 60px rgba(0,0,0,.35);
+  transform:translateX(105%);transition:transform .45s var(--ease)}
+.guide-page.active .guide-inner{transform:translateX(0)}
 
 .guide-close{position:fixed;top:18px;inset-inline-end:18px;z-index:210;
   width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);
@@ -374,4 +377,9 @@ footer{text-align:center;padding:20px;font-size:.8rem;color:var(--muted);
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+@media (max-width:700px){
+  .guide-page{background:rgba(7,16,12,.98)}
+  .guide-inner{width:100%;inset-inline-end:0}
 }
