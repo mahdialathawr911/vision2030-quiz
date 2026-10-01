@@ -563,139 +563,84 @@
   /* ==================== PDF REPORT ==================== */
   function buildPdfHtml(){
     var winner=getRanked()[0];
-    var s=SECTORS[LANG][winner];
-    var g=GUIDE_DATA[winner];
-    var rd=REGION_DATA[selectedRegion]||{};
+    var sector=SECTORS[LANG][winner];
+    var guide=GUIDE_DATA[winner];
+    var regionData=REGION_DATA[selectedRegion]||{};
     var regionName='';
     REGIONS.forEach(function(r){if(r.key===selectedRegion)regionName=r.name[LANG];});
-
-    var dateStr = new Date().toLocaleDateString(
-      LANG==='ar'?'ar-SA':'en-GB',
-      {year:'numeric',month:'long',day:'numeric'}
-    );
-
-    var chipsHtml='';
-    s.careers.forEach(function(c){
-      chipsHtml+='<span style="display:inline-block;background:#EDEFEB;color:#14241E;'
-        +'padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin:4px">'+c+'</span>';
-    });
-
-    var reasonsHtml='';
-    g.why[LANG].forEach(function(w,i){
-      reasonsHtml+='<div style="display:flex;gap:12px;padding:12px 14px;background:#F7F8F6;'
-        +'border-radius:10px;margin-bottom:8px">'
-        +'<div style="flex-shrink:0;width:26px;height:26px;border-radius:50%;'
-        +'background:linear-gradient(135deg,#D4A017,#B8860B);color:#1A1300;'
-        +'display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px">'
-        +(i+1)+'</div>'
-        +'<div style="flex:1;font-size:13.5px;line-height:1.6;color:#14241E">'+w+'</div>'
-        +'</div>';
-    });
-
-    var statsHtml='';
-    g.stats.forEach(function(st){
-      statsHtml+='<div style="text-align:center;padding:14px 8px;background:#F7F8F6;'
-        +'border-radius:10px;border:1px solid #EDEFEB">'
-        +'<div style="font-size:22px;font-weight:900;color:#00664A;font-family:Cairo">'+st.n+'</div>'
-        +'<div style="font-size:11.5px;color:#4B5A54;margin-top:4px;line-height:1.3">'
-        +st.l[LANG]+'</div>'
-        +'</div>';
-    });
-
-    var actionsHtml='';
-    g.actions.forEach(function(a,i){
-      actionsHtml+='<div style="display:flex;gap:12px;padding:14px;background:#F7F8F6;'
-        +'border-radius:10px;margin-bottom:8px;border:1px solid #EDEFEB">'
-        +'<div style="flex-shrink:0;width:32px;height:32px;border-radius:10px;'
-        +'background:linear-gradient(135deg,#00664A,#008F68);color:#fff;'
-        +'display:flex;align-items:center;justify-content:center;font-weight:900;'
-        +'font-size:14px;font-family:Cairo">'+(i+1)+'</div>'
-        +'<div style="flex:1">'
-        +'<div style="font-size:14px;font-weight:700;color:#003D2C;margin-bottom:4px;'
-        +'font-family:Cairo">'+a.t[LANG]+'</div>'
-        +'<div style="font-size:12.5px;color:#4B5A54;line-height:1.5;margin-bottom:6px">'
-        +a.d[LANG]+'</div>'
-        +'<div style="display:inline-block;padding:4px 10px;background:rgba(212,160,23,.15);'
-        +'border:1px solid rgba(212,160,23,.4);color:#8B6914;border-radius:8px;'
-        +'font-size:11.5px;font-weight:700">'+a.l+'</div>'
-        +'</div>'
-        +'</div>';
-    });
-
-    var sectionTitle = function(emoji,text){
-      return '<div style="font-size:15px;font-weight:900;color:#003D2C;margin:22px 0 12px;'
-        +'padding-bottom:8px;border-bottom:2px solid #EDEFEB;font-family:Cairo">'
-        +emoji+' '+text+'</div>';
+    var dateStr=new Date().toLocaleDateString(LANG==='ar'?'ar-SA':'en-GB',
+      {year:'numeric',month:'long',day:'numeric'});
+    var isAr=LANG==='ar';
+    var title=isAr?'تقرير المسار المهني':'Career Path Report';
+    var section=function(icon,label){
+      return '<div style="font-family:Cairo,Tajawal,sans-serif;font-size:19px;font-weight:900;'
+        +'color:#075C45;margin:28px 0 13px;padding:0 0 9px;border-bottom:2px solid #D9E7DF">'
+        +icon+' '+label+'</div>';
     };
-
-    return '<div dir="rtl" style="'
-      +'font-family:Tajawal,system-ui,sans-serif;'
-      +'direction:rtl;text-align:right;color:#14241E;background:#fff;'
-      +'padding:44px 40px;width:794px;min-height:1123px;box-sizing:border-box;'
-      +'">'
-
-      +'<div style="display:flex;justify-content:space-between;align-items:center;'
-      +'border-bottom:3px solid #00664A;padding-bottom:18px;margin-bottom:28px">'
-      +'<div>'
-      +'<div style="font-size:24px;font-weight:900;color:#00664A;font-family:Cairo">رؤية 2030</div>'
-      +'<div style="font-size:13px;color:#4B5A54;margin-top:2px">تقرير المسار المهني المخصص</div>'
-      +'</div>'
-      +'<div style="background:linear-gradient(135deg,#00664A,#D4A017);color:#fff;'
-      +'width:56px;height:56px;border-radius:14px;display:flex;align-items:center;'
-      +'justify-content:center;font-size:28px;font-weight:900;font-family:Cairo">ر</div>'
-      +'</div>'
-
-      +'<div style="text-align:center;margin-bottom:28px">'
-      +'<div style="font-size:60px;margin-bottom:10px;line-height:1">'+g.emoji+'</div>'
-      +'<div style="font-size:12px;color:#D4A017;font-weight:700;letter-spacing:2px;'
-      +'margin-bottom:8px">'+T('eyebrow')+'</div>'
-      +'<div style="font-size:32px;font-weight:900;color:#003D2C;margin-bottom:6px;'
-      +'font-family:Cairo">'+s.name+'</div>'
-      +'<div style="font-size:16px;color:#D4A017;font-weight:700">'+s.tagline+'</div>'
-      +'</div>'
-
-      +'<div style="background:#F7F8F6;border-right:4px solid #00664A;padding:18px 20px;'
-      +'border-radius:10px;margin-bottom:8px">'
-      +'<div style="font-size:13.5px;line-height:1.75;color:#14241E">'+s.desc+'</div>'
-      +'</div>'
-
-      +sectionTitle('💼',T('careersTitle'))
-      +'<div style="margin-bottom:8px">'+chipsHtml+'</div>'
-
-      +sectionTitle('🎯',T('gWhy'))
-      +reasonsHtml
-
-      +sectionTitle('📈',T('gStats'))
-      +'<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;'
-      +'margin-bottom:8px">'+statsHtml+'</div>'
-
-      +(rd[winner]
-        ? sectionTitle('📍',Tf('gOpp',{region:regionName}))
-          +'<div style="background:linear-gradient(135deg,rgba(0,102,74,.08),'
-          +'rgba(212,160,23,.05));padding:16px 18px;border-radius:10px;'
-          +'border:1px solid #EDEFEB">'
-          +'<div style="font-size:13.5px;line-height:1.7;color:#14241E">'
-          +rd[winner][LANG]+'</div>'
-          +'</div>'
-        : '')
-
-      +sectionTitle('🚀',T('gAction'))
-      +actionsHtml
-
-      +'<div style="margin-top:20px;background:rgba(212,160,23,.1);border:1px dashed #D4A017;'
-      +'padding:16px 18px;border-radius:10px">'
-      +'<div style="font-size:13.5px;font-weight:700;color:#8B6914;margin-bottom:6px;'
-      +'font-family:Cairo">💡 '+T('gTip')+'</div>'
-      +'<div style="font-size:12.5px;line-height:1.7;color:#14241E">'+T('gTipText')+'</div>'
-      +'</div>'
-
-      +'<div style="text-align:center;padding-top:22px;margin-top:28px;'
-      +'border-top:2px solid #EDEFEB;color:#4B5A54;font-size:11px">'
-      +'<div>'+T('footer')+'</div>'
-      +'<div style="margin-top:4px">'+dateStr+'</div>'
-      +'</div>'
-
-      +'</div>';
+    var careers=sector.careers.map(function(c){
+      return '<span style="display:inline-block;margin:4px;padding:8px 13px;border-radius:20px;'
+        +'background:#EAF2ED;color:#164C3C;font-size:13px;font-weight:700">'+c+'</span>';
+    }).join('');
+    var reasons=guide.why[LANG].map(function(w,i){
+      return '<div style="display:flex;align-items:flex-start;gap:12px;padding:12px 14px;'
+        +'margin:0 0 9px;background:#F5F8F6;border:1px solid #E4ECE7;border-radius:11px;'
+        +'page-break-inside:avoid;break-inside:avoid">'
+        +'<span style="display:inline-block;min-width:27px;height:27px;line-height:27px;text-align:center;'
+        +'border-radius:50%;background:#D9B34B;color:#24352D;font-weight:900;font-size:12px">'+(i+1)+'</span>'
+        +'<span style="font-size:14px;line-height:1.75;color:#263B32">'+w+'</span></div>';
+    }).join('');
+    var stats=guide.stats.map(function(st){
+      return '<div style="display:inline-block;vertical-align:top;width:22%;min-height:78px;'
+        +'box-sizing:border-box;text-align:center;padding:13px 5px;margin:0 1%;'
+        +'background:#F5F8F6;border:1px solid #E0E9E3;border-radius:12px">'
+        +'<div style="font-family:Cairo,Tajawal,sans-serif;font-size:23px;font-weight:900;color:#087052">'+st.n+'</div>'
+        +'<div style="font-size:11px;line-height:1.5;color:#52635A;margin-top:4px">'+st.l[LANG]+'</div></div>';
+    }).join('');
+    var actions=guide.actions.map(function(a,i){
+      return '<div style="display:flex;gap:13px;padding:15px;margin-bottom:10px;'
+        +'border:1px solid #E1E9E4;border-radius:12px;background:#F8FAF8;'
+        +'page-break-inside:avoid;break-inside:avoid">'
+        +'<span style="display:inline-block;min-width:31px;height:31px;line-height:31px;text-align:center;'
+        +'border-radius:9px;background:#087052;color:#fff;font-family:Cairo;font-weight:900">'+(i+1)+'</span>'
+        +'<div style="flex:1"><div style="font-family:Cairo,Tajawal,sans-serif;font-weight:900;'
+        +'font-size:15px;color:#174C3B;margin-bottom:5px">'+a.t[LANG]+'</div>'
+        +'<div style="font-size:13px;line-height:1.7;color:#46584F;margin-bottom:7px">'+a.d[LANG]+'</div>'
+        +'<span style="display:inline-block;padding:4px 10px;border-radius:7px;background:#F8EFCF;'
+        +'color:#755A12;font-size:11px;font-weight:700">'+a.l+'</span></div></div>';
+    }).join('');
+    var region=regionData[winner]
+      ? '<div style="padding:16px 18px;border-radius:12px;background:#F1F6F2;border-right:4px solid #087052;'
+        +'font-size:14px;line-height:1.8;color:#30443A">'+regionData[winner][LANG]+'</div>'
+      : '<div style="font-size:13px;color:#68766F">'+(isAr?'لم يتم تحديد تفاصيل إضافية للمنطقة.':'No additional regional details available.')+'</div>';
+    return '<div dir="'+(isAr?'rtl':'ltr')+'" style="width:794px;box-sizing:border-box;padding:42px 48px;'
+      +'background:#fff;color:#20342B;font-family:Tajawal,Arial,sans-serif;text-align:'+(isAr?'right':'left')+';'
+      +'direction:'+(isAr?'rtl':'ltr')+';font-size:14px;line-height:1.65">'
+      +'<div style="padding:23px 26px;border-radius:17px;background:#075C45;color:#fff;margin-bottom:24px">'
+      +'<div style="font-family:Cairo,Tajawal,sans-serif;font-size:15px;font-weight:700;color:#EBD58B">رؤية 2030</div>'
+      +'<div style="font-family:Cairo,Tajawal,sans-serif;font-size:27px;font-weight:900;margin-top:13px">'+title+'</div>'
+      +'<div style="font-size:12px;color:#E4EEE8;margin-top:5px">'+dateStr+'</div></div>'
+      +'<div style="text-align:center;padding:17px 10px 22px;border-bottom:1px solid #E1E9E4">'
+      +'<div style="font-size:54px;line-height:1.2">'+guide.emoji+'</div>'
+      +'<div style="font-size:12px;font-weight:700;color:#A77D16;margin-top:10px">'+T('eyebrow')+'</div>'
+      +'<div style="font-family:Cairo,Tajawal,sans-serif;font-size:30px;font-weight:900;color:#075C45;margin:5px 0">'+sector.name+'</div>'
+      +'<div style="font-size:15px;font-weight:700;color:#A77D16">'+sector.tagline+'</div></div>'
+      +section('✦',isAr?'ملخص المسار':'Path overview')
+      +'<div style="padding:17px 19px;background:#F5F8F6;border-radius:12px;border-right:4px solid #087052;'
+      +'font-size:14px;line-height:1.9;color:#30443A">'+sector.desc+'</div>'
+      +section('▦',T('careersTitle'))+'<div>'+careers+'</div>'
+      +'<div style="page-break-before:always;break-before:page"></div>'
+      +section('◎',T('gWhy'))+reasons
+      +section('↗',T('gStats'))+'<div style="text-align:center">'+stats+'</div>'
+      +section('⌖',isAr?'الفرص في المنطقة المختارة':'Opportunities in your selected region')
+      +'<div style="font-weight:900;color:#075C45;margin-bottom:8px">'+(regionName||'—')+'</div>'+region
+      +'<div style="page-break-before:always;break-before:page"></div>'
+      +section('✓',T('gAction'))+actions
+      +'<div style="margin-top:23px;padding:17px 19px;border-radius:12px;background:#FBF5E3;'
+      +'border:1px solid #E8D69B"><div style="font-family:Cairo,Tajawal,sans-serif;font-weight:900;'
+      +'font-size:15px;color:#765B15;margin-bottom:5px">💡 '+T('gTip')+'</div>'
+      +'<div style="font-size:13px;line-height:1.8;color:#3D493F">'+T('gTipText')+'</div></div>'
+      +'<div style="margin-top:28px;padding-top:14px;border-top:1px solid #E1E9E4;text-align:center;'
+      +'font-size:11px;color:#758179">'+T('footer')+' · '+dateStr+'</div></div>';
   }
 
   function downloadReport(){
@@ -712,15 +657,17 @@
     btn.disabled=true;
 
     var container=document.createElement('div');
-    container.style.position='absolute';
-    container.style.left='-10000px';
+    container.style.position='fixed';
+    container.style.left='0';
     container.style.top='0';
     container.style.width='794px';
     container.style.minHeight='1123px';
     container.style.background='#fff';
     container.style.color='#14241E';
-    container.style.zIndex='99999';
+    container.style.zIndex='2147483647';
     container.style.pointerEvents='none';
+    container.style.maxHeight='100vh';
+    container.style.overflow='auto';
     container.innerHTML=buildPdfHtml();
     document.body.appendChild(container);
 
@@ -729,7 +676,7 @@
       margin:0,
       filename:'vision2030-'+winner+'-report.pdf',
       image:{type:'jpeg',quality:0.98},
-      html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false},
+      html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,windowWidth:794,scrollX:0,scrollY:0},
       jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
       pagebreak:{mode:['css','legacy'],avoid:'.action-step,.reason-list > div'}
     };
