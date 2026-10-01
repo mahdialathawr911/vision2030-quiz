@@ -712,12 +712,15 @@
     btn.disabled=true;
 
     var container=document.createElement('div');
-    container.style.position='fixed';
-    container.style.left='-9999px';
+    container.style.position='absolute';
+    container.style.left='-10000px';
     container.style.top='0';
     container.style.width='794px';
+    container.style.minHeight='1123px';
     container.style.background='#fff';
-    container.style.zIndex='-1';
+    container.style.color='#14241E';
+    container.style.zIndex='99999';
+    container.style.pointerEvents='none';
     container.innerHTML=buildPdfHtml();
     document.body.appendChild(container);
 
@@ -731,18 +734,26 @@
       pagebreak:{mode:['css','legacy'],avoid:'.action-step,.reason-list > div'}
     };
 
-    html2pdf().set(opt).from(container).save()
-      .then(function(){
-        try{container.remove();}catch(e){}
-        btn.textContent=T('copied');
-        setTimeout(function(){btn.textContent=original;btn.disabled=false;},1800);
-      })
-      .catch(function(err){
-        console.error(err);
-        try{container.remove();}catch(e){}
-        btn.textContent=T('pdfError');
-        setTimeout(function(){btn.textContent=original;btn.disabled=false;},2200);
+    var renderPromise = (document.fonts && document.fonts.ready)
+      ? document.fonts.ready
+      : Promise.resolve();
+
+    renderPromise.then(function(){
+      return new Promise(function(resolve){setTimeout(resolve,250);});
+    }).then(function(){
+      return html2pdf().set(opt).from(container).toPdf().get('pdf').then(function(pdf){
+        pdf.save(opt.filename);
       });
+    }).then(function(){
+      try{container.remove();}catch(e){}
+      btn.textContent=T('copied');
+      setTimeout(function(){btn.textContent=original;btn.disabled=false;},1800);
+    }).catch(function(err){
+      console.error(err);
+      try{container.remove();}catch(e){}
+      btn.textContent=T('pdfError');
+      setTimeout(function(){btn.textContent=original;btn.disabled=false;},2200);
+    });
   }
 
   function on(id,ev,fn){var el=document.getElementById(id);if(!el)return;el.addEventListener(ev,function(e){
