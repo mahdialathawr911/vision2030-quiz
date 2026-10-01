@@ -644,63 +644,43 @@
   }
 
   function downloadReport(){
-    if(typeof html2pdf === 'undefined'){
+    var btn=$('copyBtn');
+    var original=T('share');
+    // Open synchronously from the click so browsers do not block the report window.
+    var reportWindow=window.open('','_blank');
+    if(!reportWindow){
       alert(LANG==='ar'
-        ? 'مكتبة PDF لم تُحمّل بعد. تأكد من اتصالك بالإنترنت ثم أعد المحاولة.'
-        : 'PDF library not loaded. Check your connection and try again.');
+        ? 'يرجى السماح بالنوافذ المنبثقة لهذا الموقع، ثم أعد تحميل التقرير.'
+        : 'Allow pop-ups for this site, then try downloading the report again.');
       return;
     }
 
-    var btn=$('copyBtn');
-    var original=T('share');
     btn.textContent=T('downloading');
     btn.disabled=true;
-
-    var container=document.createElement('div');
-    container.style.position='fixed';
-    container.style.left='0';
-    container.style.top='0';
-    container.style.width='794px';
-    container.style.minHeight='1123px';
-    container.style.background='#fff';
-    container.style.color='#14241E';
-    container.style.zIndex='2147483647';
-    container.style.pointerEvents='none';
-    container.style.maxHeight='100vh';
-    container.style.overflow='auto';
-    container.innerHTML=buildPdfHtml();
-    document.body.appendChild(container);
-
-    var winner=getRanked()[0];
-    var opt={
-      margin:0,
-      filename:'vision2030-'+winner+'-report.pdf',
-      image:{type:'jpeg',quality:0.98},
-      html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,windowWidth:794,scrollX:0,scrollY:0},
-      jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
-      pagebreak:{mode:['css','legacy'],avoid:'.action-step,.reason-list > div'}
-    };
-
-    var renderPromise = (document.fonts && document.fonts.ready)
-      ? document.fonts.ready
-      : Promise.resolve();
-
-    renderPromise.then(function(){
-      return new Promise(function(resolve){setTimeout(resolve,250);});
-    }).then(function(){
-      return html2pdf().set(opt).from(container).toPdf().get('pdf').then(function(pdf){
-        pdf.save(opt.filename);
-      });
-    }).then(function(){
-      try{container.remove();}catch(e){}
-      btn.textContent=T('copied');
-      setTimeout(function(){btn.textContent=original;btn.disabled=false;},1800);
-    }).catch(function(err){
+    var isAr=LANG==='ar';
+    var html='<!doctype html><html lang="'+(isAr?'ar':'en')+'" dir="'+(isAr?'rtl':'ltr')+'"><head>'
+      +'<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+      +'<title>'+(isAr?'تقرير المسار المهني':'Career Path Report')+'</title>'
+      +'<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">'
+      +'<style>html,body{margin:0;padding:0;background:#fff;color:#20342B}body{font-family:Tajawal,Arial,sans-serif}'
+      +'@page{size:A4;margin:0}*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}'
+      +'@media screen{body{background:#eef2ef;padding:24px}.report{margin:0 auto;box-shadow:0 4px 24px #0002}}'
+      +'@media print{body{padding:0}.report{box-shadow:none!important}}'
+      +'</style></head><body><main class="report">'+buildPdfHtml()+'</main>'
+      +'<script>window.onload=function(){setTimeout(function(){window.focus();window.print();},700)};<\/script>'
+      +'</body></html>';
+    try{
+      reportWindow.document.open();
+      reportWindow.document.write(html);
+      reportWindow.document.close();
+      btn.textContent=isAr?'تم فتح التقرير للطباعة':'Report opened for printing';
+      setTimeout(function(){btn.textContent=original;btn.disabled=false;},2500);
+    }catch(err){
       console.error(err);
-      try{container.remove();}catch(e){}
+      reportWindow.close();
       btn.textContent=T('pdfError');
       setTimeout(function(){btn.textContent=original;btn.disabled=false;},2200);
-    });
+    }
   }
 
   function on(id,ev,fn){var el=document.getElementById(id);if(!el)return;el.addEventListener(ev,function(e){
