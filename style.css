@@ -206,6 +206,14 @@ main{flex:1;position:relative;display:flex;align-items:flex-start;justify-conten
   box-shadow:0 0 10px var(--accent);animation:blink 1.8s infinite}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
+/* ============================================================
+   ✅✅✅ إصلاح اتجاه الأسهم عند الإنجليزية ✅✅✅
+   ============================================================ */
+html[dir="ltr"] .jv-conn svg{
+  transform:scaleX(-1);
+  transform-origin:center center;
+}
+
 /* START */
 .badge-row{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
 .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;
@@ -364,15 +372,14 @@ main{flex:1;position:relative;display:flex;align-items:flex-start;justify-conten
 .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.2)}
 .btn:disabled{opacity:.6;cursor:wait}
 
-.guide-page{position:fixed;inset:0;z-index:200;background:rgba(7,16,12,.55);
-  backdrop-filter:blur(8px);overflow:hidden;
-  opacity:0;transition:opacity .35s var(--ease);pointer-events:none}
-.guide-page.active{opacity:1;pointer-events:auto}
-.guide-inner{position:absolute;inset-block:0;inset-inline-end:0;width:min(760px,92vw);
-  max-width:none;overflow-y:auto;margin:0;padding:64px 22px 120px;
-  background:rgba(7,16,12,.98);box-shadow:-18px 0 60px rgba(0,0,0,.35);
-  transform:translateX(105%);transition:transform .45s var(--ease)}
-.guide-page.active .guide-inner{transform:translateX(0)}
+/* GUIDE PAGE */
+.guide-page{position:fixed;inset:0;z-index:200;background:rgba(7,16,12,.97);
+  backdrop-filter:blur(30px);overflow-y:auto;overflow-x:hidden;
+  opacity:0;transform:translateY(40px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);pointer-events:none;
+  display:flex;justify-content:center;align-items:flex-start}
+.guide-page.active{opacity:1;transform:none;pointer-events:auto}
+.guide-inner{width:100%;max-width:620px;padding:70px 20px 130px;margin:0 auto}
 .guide-close{position:fixed;top:18px;inset-inline-end:18px;z-index:210;
   width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);
   border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.3rem;
@@ -460,9 +467,4 @@ footer{text-align:center;padding:20px;font-size:.76rem;color:var(--muted);
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
-}
-
-@media (max-width:700px){
-  .guide-page{background:rgba(7,16,12,.98)}
-  .guide-inner{width:100%;inset-inline-end:0}
 }
