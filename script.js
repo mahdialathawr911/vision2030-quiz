@@ -7,8 +7,20 @@
   var I18N = {
     ar:{
       title:'اكتشف مسارك · رؤية 2030',
+      wvEyebrow:'رؤية السعودية 2030',
+      wvTitleA:'رحلتك نحو',wvTitleB:'مستقبلك',
+      wvTag:'خمس خطوات بسيطة تفصلك عن اكتشاف المسار الذي ينبض قلبه معك.',
+      wvS1:'قطاعات',wvS2:'أسئلة',wvS3:'ثانية',
+      wvJourneyLabel:'رحلتك خطوة بخطوة',
+      j1T:'أنت الآن هنا',j1D:'في بداية طريقك نحو المستقبل',
+      j2T:'تكتشف نفسك',j2D:'نفهم ميولك واهتماماتك',
+      j3T:'تحدد مسارك',j3D:'من بين 7 قطاعات واعدة',
+      j4T:'تحصل على دليلك',j4D:'فرص حقيقية وبرامج مجانية',
+      j5T:'تحمّل تقريرك',j5D:'PDF كامل قابل للمشاركة',
+      jCtaT:'ابدأ الرحلة الآن',jCtaD:'دقيقة واحدة وتكتشف مسارك',
+      journeyFoot:'بدون تسجيل · بدون بيانات شخصية · أقل من دقيقة',
       heroTitle:'اكتشف مسارك المستقبلي',
-      heroSub:'6 قطاعات تقود رؤية 2030. أجب بصدق، حدّد منطقتك، واحصل على دليل مخصص بالفرص والبرامج.',
+      heroSub:'7 قطاعات تقود رؤية 2030. أجب بصدق، حدّد منطقتك، واحصل على دليل مخصص.',
       b1:'10 أسئلة',b2:'+ سؤال منطقتك',b3:'دليل مسار كامل',
       s1:'قطاعات',s2:'أسئلة',s3:'ثانية',
       startBtn:'ابدأ الرحلة',meta:'بدون تسجيل · بدون بيانات شخصية',
@@ -21,77 +33,107 @@
       runnerUp:'<b>قريب منك أيضًا:</b> {name}',
       discover:'اكتشف مسارك الكامل',
       retake:'جولة أخرى',share:'تحميل نتيجتي',
-      copied:'تم التحميل ✓',
-      downloading:'جاري تجهيز التقرير…',
-      pdfError:'تعذّر إنشاء التقرير · حاول مرة أخرى',
-      lastResult:'آخر مرة كنت <b>{name}</b> — أعد التجربة وشوف!',
+      copied:'تم التحميل ✓',downloading:'جاري تجهيز التقرير…',
+      pdfError:'تعذّر إنشاء التقرير',
+      lastResult:'آخر مرة كنت <b>{name}</b> — أعد التجربة!',
       footer:'مستوحى من رؤية السعودية 2030 · تجربة استكشافية',
-      gWhy:'ليش أنت مناسب لهذا المجال؟',
-      gStats:'القطاع بالأرقام',
-      gOpp:'الفرص في {region}',
-      gAction:'خطتك العملية — ابدأ الآن',
+      gWhy:'ليش أنت مناسب لهذا المجال؟',gStats:'القطاع بالأرقام',
+      gOpp:'الفرص في {region}',gAction:'خطتك العملية — ابدأ الآن',
       gTip:'نصيحة إضافية',
-      gTipText:'ابدأ بخطوة واحدة فقط اليوم. سجّل في برنامج واحد من القائمة أعلاه، وأكمل التسجيل. الخطوة الصغيرة اليوم تصنع فرقاً كبيراً بعد سنة. تذكّر: رؤية 2030 تحتاجك.',
+      gTipText:'ابدأ بخطوة واحدة فقط اليوم. سجّل في برنامج واحد من القائمة أعلاه، وأكمل التسجيل. الخطوة الصغيرة اليوم تصنع فرقاً كبيراً بعد سنة.',
       gSub:'دليلك المخصص لتبدأ رحلتك في {sector} — في {region}',
-      stickyGo:'ابدأ الآن',
-      shareText:'اكتشفت في اختبار رؤية 2030 أنني {sector} — جرّب أنت أيضًا!'
+      stickyGo:'ابدأ الآن',shareText:'اكتشفت أنني {sector}!'
     },
     en:{
       title:'Discover Your Path · Vision 2030',
+      wvEyebrow:'Saudi Vision 2030',
+      wvTitleA:'Your journey toward',wvTitleB:'your future',
+      wvTag:'Five simple steps to discover the path that resonates with you.',
+      wvS1:'sectors',wvS2:'questions',wvS3:'seconds',
+      wvJourneyLabel:'Your journey step by step',
+      j1T:'You are here',j1D:'At the start of your road to the future',
+      j2T:'Discover yourself',j2D:'We learn your interests',
+      j3T:'Find your path',j3D:'Among 7 promising sectors',
+      j4T:'Get your guide',j4D:'Real opportunities and free programs',
+      j5T:'Download your report',j5D:'Full shareable PDF',
+      jCtaT:'Start the journey now',jCtaD:'One minute to discover your path',
+      journeyFoot:'No sign-up · No personal data · Under a minute',
       heroTitle:'Discover Your Future Path',
-      heroSub:'6 sectors driving Vision 2030. Answer honestly, pick your region, and get a personalized guide.',
+      heroSub:'7 sectors driving Vision 2030.',
       b1:'10 questions',b2:'+ region',b3:'full career guide',
       s1:'sectors',s2:'questions',s3:'seconds',
       startBtn:'Start the journey',meta:'No sign-up · No personal data',
       backBtn:'← Back',
       progress:'Question {n} of {t}',
       regionStep:'Last step',regionCheer:'Where do you see yourself? 🗺️',
-      regionTitle:'Choose the region where you\'d like to live and work:',
+      regionTitle:'Choose the region:',
       eyebrow:'Your best-fit sector',
       careersTitle:'Example careers',
       runnerUp:'<b>Close second:</b> {name}',
       discover:'Explore your full path',
       retake:'Play again',share:'Download result',
-      copied:'Downloaded ✓',
-      downloading:'Preparing report…',
-      pdfError:'Could not generate report · try again',
-      lastResult:'Last time you were <b>{name}</b> — take it again!',
-      footer:'Inspired by Saudi Vision 2030 · Exploratory experience',
-      gWhy:'Why you fit this field?',
-      gStats:'The sector in numbers',
-      gOpp:'Opportunities in {region}',
-      gAction:'Your action plan — start now',
-      gTip:'Extra tip',
-      gTipText:'Start with one step today. Register in one program above and complete the signup. Small steps today create big results a year from now. Remember: Vision 2030 needs you.',
-      gSub:'Your personalized guide to start your journey in {sector} — in {region}',
-      stickyGo:'Start now',
-      shareText:'My Vision 2030 quiz result: {sector} — try it yourself!'
+      copied:'Downloaded ✓',downloading:'Preparing report…',
+      pdfError:'Could not generate report',
+      lastResult:'Last time you were <b>{name}</b>',
+      footer:'Inspired by Saudi Vision 2030',
+      gWhy:'Why you fit this field?',gStats:'The sector in numbers',
+      gOpp:'Opportunities in {region}',gAction:'Your action plan',
+      gTip:'Extra tip',gTipText:'Start with one step today.',
+      gSub:'Your guide for {sector} in {region}',
+      stickyGo:'Start now',shareText:'I got {sector}!'
     }
   };
 
   function T(k){ return I18N[LANG][k]; }
-  function Tf(k,v){
-    var s=I18N[LANG][k];
-    if(typeof s!=='string') return s;
-    return s.replace(/\{(\w+)\}/g, function(_,n){ return v[n]!=null?v[n]:''; });
-  }
+  function Tf(k,v){var s=I18N[LANG][k];if(typeof s!=='string')return s;
+    return s.replace(/\{(\w+)\}/g,function(_,n){return v[n]!=null?v[n]:'';});}
 
   var VIDEOS = {
-    tourism:['https://videos.pexels.com/video-files/2169880/2169880-sd_640_360_30fps.mp4'],
-    tech:['https://videos.pexels.com/video-files/3129671/3129671-sd_640_360_30fps.mp4'],
-    health:['https://videos.pexels.com/video-files/4098993/4098993-sd_640_360_25fps.mp4'],
-    entertainment:['https://videos.pexels.com/video-files/2022395/2022395-sd_640_360_30fps.mp4'],
-    education:['https://videos.pexels.com/video-files/3195394/3195394-sd_640_360_25fps.mp4'],
-    finance:['https://videos.pexels.com/video-files/3121459/3121459-sd_640_360_24fps.mp4']
+    tourism:[
+      'https://videos.pexels.com/video-files/2169880/2169880-sd_640_360_30fps.mp4',
+      'https://videos.pexels.com/video-files/857195/857195-sd_640_360_25fps.mp4'
+    ],
+    tech:[
+      'https://videos.pexels.com/video-files/3129671/3129671-sd_640_360_30fps.mp4',
+      'https://videos.pexels.com/video-files/852421/852421-sd_640_360_30fps.mp4'
+    ],
+    health:[
+      'https://videos.pexels.com/video-files/4098993/4098993-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/3196036/3196036-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/4027609/4027609-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/3982240/3982240-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/5721935/5721935-sd_640_360_25fps.mp4'
+    ],
+    entertainment:[
+      'https://videos.pexels.com/video-files/2022395/2022395-sd_640_360_30fps.mp4',
+      'https://videos.pexels.com/video-files/1721294/1721294-sd_640_360_25fps.mp4'
+    ],
+    education:[
+      'https://videos.pexels.com/video-files/8088507/8088507-sd_640_360_30fps.mp4',
+      'https://videos.pexels.com/video-files/5199629/5199629-sd_640_360_30fps.mp4',
+      'https://videos.pexels.com/video-files/3205622/3205622-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/4125025/4125025-sd_640_360_25fps.mp4'
+    ],
+    finance:[
+      'https://videos.pexels.com/video-files/3121459/3121459-sd_640_360_24fps.mp4',
+      'https://videos.pexels.com/video-files/7578540/7578540-sd_640_360_30fps.mp4'
+    ],
+    engineering:[
+      'https://videos.pexels.com/video-files/4489758/4489758-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/855106/855106-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/3773486/3773486-sd_640_360_25fps.mp4',
+      'https://videos.pexels.com/video-files/3196181/3196181-sd_640_360_25fps.mp4'
+    ]
   };
 
   var PHOTO = {
     tourism:'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75&auto=format&fit=crop',
     tech:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=75&auto=format&fit=crop',
-    health:'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&q=75&auto=format&fit=crop',
+    health:'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&q=75&auto=format&fit=crop',
     entertainment:'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500&q=75&auto=format&fit=crop',
     education:'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=75&auto=format&fit=crop',
-    finance:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=75&auto=format&fit=crop'
+    finance:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=75&auto=format&fit=crop',
+    engineering:'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&q=75&auto=format&fit=crop'
   };
   var BIG_PHOTO = {
     tourism:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1000&q=75&auto=format&fit=crop',
@@ -99,128 +141,95 @@
     health:'https://images.unsplash.com/photo-1631815588090-d1bcbe9a8b2b?w=1000&q=75&auto=format&fit=crop',
     entertainment:'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000&q=75&auto=format&fit=crop',
     education:'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1000&q=75&auto=format&fit=crop',
-    finance:'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1000&q=75&auto=format&fit=crop'
+    finance:'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1000&q=75&auto=format&fit=crop',
+    engineering:'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=1000&q=75&auto=format&fit=crop'
   };
 
-  var KEYS=['tourism','tech','health','entertainment','education','finance'];
+  var KEYS=['tourism','tech','health','entertainment','education','finance','engineering'];
   var COLOR={tourism:'#FF7A45',tech:'#4C8DFF',health:'#2DD4BF',
-    entertainment:'#C084FC',education:'#818CF8',finance:'#FBBF24'};
+    entertainment:'#C084FC',education:'#818CF8',finance:'#FBBF24',engineering:'#EF4444'};
   var MOOD={tourism:'rgba(255,122,69,.32)',tech:'rgba(76,141,255,.32)',
     health:'rgba(45,212,191,.32)',entertainment:'rgba(192,132,252,.30)',
-    education:'rgba(129,140,248,.30)',finance:'rgba(251,191,36,.28)'};
+    education:'rgba(129,140,248,.30)',finance:'rgba(251,191,36,.28)',
+    engineering:'rgba(239,68,68,.32)'};
 
   var SECTORS = {
     ar:{
-      tourism:{name:'السياحة والضيافة',tagline:'رفيق الثقافات 🌍',desc:'تنبهر بالأماكن الجديدة والناس والقصص. مشاريع نيوم والبحر الأحمر تحتاج أشخاصًا يحوّلون الأماكن إلى تجارب لا تُنسى.',careers:['مرشد سياحي','مدير فندق','أمين تراث','منظم فعاليات']},
-      tech:{name:'التقنية والابتكار',tagline:'باني المستقبل الرقمي 💡',desc:'تستمتع ببناء ما لم يكن موجودًا. من الذكاء الاصطناعي إلى الروبوتات، التقنية قلب التحول الرقمي السعودي.',careers:['مهندس برمجيات','عالم بيانات','محلل أمن سيبراني','باحث AI']},
-      health:{name:'الصحة والعافية',tagline:'صانع حياة أفضل ❤️',desc:'تهتم براحة الناس وتسعى لتأثير مباشر. القطاع الصحي يتوسع بسرعة مع مستشفيات ومبادرات تقنية صحية.',careers:['طبيب','ممرض','أخصائي علاج طبيعي','أخصائي صحة عامة']},
-      entertainment:{name:'الترفيه والرياضة',tagline:'صانع التجارب 🎬',desc:'تحب خلق لحظات يتذكرها الناس. القدية ومشهد الفعاليات المتنامي يُبنى بأشخاص بطاقتك وإبداعك.',careers:['مصمم ألعاب','مدرب رياضي','منتج أفلام','منتج فعاليات']},
-      education:{name:'التعليم ورأس المال البشري',tagline:'باني المعرفة 📚',desc:'تستمتع بمساعدة الآخرين على النمو. رؤية 2030 تستثمر بكثافة في التعليم والمهارات لإعداد الجيل القادم.',careers:['معلم','مصمم مناهج','مدرب شركات','مطور EdTech']},
-      finance:{name:'المال وريادة الأعمال',tagline:'استراتيجي النمو 📊',desc:'تفكر بالنمو والفرص والمخاطر. صعود الرياض كمركز مالي عالمي يحتاج عقولًا حادة مثلك.',careers:['محلل مالي','مصرفي استثماري','مؤسس Fintech','رائد أعمال']}
+      tourism:{name:'السياحة والضيافة',tagline:'رفيق الثقافات 🌍',desc:'تنبهر بالأماكن الجديدة والناس والقصص.',careers:['مرشد سياحي','مدير فندق','أمين تراث','منظم فعاليات']},
+      tech:{name:'التقنية والابتكار',tagline:'باني المستقبل الرقمي 💡',desc:'تستمتع ببناء ما لم يكن موجودًا.',careers:['مهندس برمجيات','عالم بيانات','محلل أمن سيبراني','باحث AI']},
+      health:{name:'الصحة والطب',tagline:'صانع حياة أفضل ❤️',desc:'تهتم براحة الناس وتسعى لتأثير مباشر. القطاع الصحي يتوسع بسرعة مع مستشفيات ومبادرات تقنية صحية.',careers:['طبيب','ممرض','أخصائي علاج طبيعي','أخصائي صحة عامة']},
+      entertainment:{name:'الترفيه والرياضة',tagline:'صانع التجارب 🎬',desc:'تحب خلق لحظات يتذكرها الناس.',careers:['مصمم ألعاب','مدرب رياضي','منتج أفلام','منتج فعاليات']},
+      education:{name:'التعليم ورأس المال البشري',tagline:'باني المعرفة 📚',desc:'تستمتع بمساعدة الآخرين على النمو.',careers:['معلم','مصمم مناهج','مدرب شركات','مطور EdTech']},
+      finance:{name:'المال وريادة الأعمال',tagline:'استراتيجي النمو 📊',desc:'تفكر بالنمو والفرص والمخاطر.',careers:['محلل مالي','مصرفي استثماري','مؤسس Fintech','رائد أعمال']},
+      engineering:{name:'الهندسة والتصنيع',tagline:'باني النهضة الصناعية 🏗️',desc:'تفكر بالأنظمة والأرقام والحلول العملية.',careers:['مهندس ميكانيكي','مهندس صناعي','مهندس كهرباء','مهندس روبوتات']}
     },
     en:{
-      tourism:{name:'Tourism & Hospitality',tagline:'Culture Connector 🌍',desc:'You light up around new places, people and stories. NEOM and the Red Sea projects need people who turn places into unforgettable experiences.',careers:['Tour guide','Hotel manager','Heritage curator','Event planner']},
-      tech:{name:'Technology & Innovation',tagline:'Digital Builder 💡',desc:'You love building what didn\'t exist. From AI to robotics, tech is at the heart of Saudi\'s digital transformation.',careers:['Software engineer','Data scientist','Cybersecurity analyst','AI researcher']},
-      health:{name:'Healthcare & Wellbeing',tagline:'Life Enhancer ❤️',desc:'You care about people\'s wellbeing. The health sector is expanding fast with new hospitals and health-tech initiatives.',careers:['Doctor','Nurse','Physiotherapist','Public health specialist']},
-      entertainment:{name:'Entertainment & Sports',tagline:'Experience Creator 🎬',desc:'You love creating moments people remember. Qiddiya and the growing events scene are built by people with your energy.',careers:['Game designer','Sports coach','Film producer','Event producer']},
-      education:{name:'Education & Human Capital',tagline:'Knowledge Builder 📚',desc:'You enjoy helping others grow. Vision 2030 invests heavily in education and skills for the next generation.',careers:['Teacher','Curriculum designer','Corporate trainer','EdTech developer']},
-      finance:{name:'Finance & Entrepreneurship',tagline:'Growth Strategist 📊',desc:'You think in growth, risk and opportunity. Riyadh\'s rise as a global financial hub needs sharp minds like yours.',careers:['Financial analyst','Investment banker','Fintech founder','Entrepreneur']}
+      tourism:{name:'Tourism',tagline:'Culture Connector 🌍',desc:'You light up around new places.',careers:['Guide','Hotel manager','Curator','Event planner']},
+      tech:{name:'Technology',tagline:'Digital Builder 💡',desc:'You love building new things.',careers:['Software engineer','Data scientist','Security analyst','AI researcher']},
+      health:{name:'Health & Medicine',tagline:'Life Enhancer ❤️',desc:'You care about people.',careers:['Doctor','Nurse','Physiotherapist','Public health']},
+      entertainment:{name:'Entertainment',tagline:'Experience Creator 🎬',desc:'You love creating moments.',careers:['Game designer','Sports coach','Film producer','Event producer']},
+      education:{name:'Education',tagline:'Knowledge Builder 📚',desc:'You enjoy helping others grow.',careers:['Teacher','Curriculum designer','Trainer','EdTech developer']},
+      finance:{name:'Finance',tagline:'Growth Strategist 📊',desc:'You think in growth & risk.',careers:['Analyst','Investment banker','Fintech founder','Entrepreneur']},
+      engineering:{name:'Engineering',tagline:'Industrial Builder 🏗️',desc:'You think in systems.',careers:['Mechanical','Industrial','Electrical','Robotics']}
     }
   };
 
   var REGIONS=[
-    {key:'riyadh',name:{ar:'الرياض',en:'Riyadh'},emoji:'🏙️',hint:{ar:'عاصمة المال والتقنية والترفيه',en:'Capital of finance & tech'}},
-    {key:'jeddah',name:{ar:'جدة والغربية',en:'Jeddah & West'},emoji:'🌊',hint:{ar:'سياحة فاخرة وتجارة',en:'Luxury tourism & trade'}},
-    {key:'neom',name:{ar:'نيوم وتبوك',en:'NEOM & Tabuk'},emoji:'⛰️',hint:{ar:'مستقبل السياحة العالمية',en:'Future of global tourism'}},
-    {key:'eastern',name:{ar:'المنطقة الشرقية',en:'Eastern Province'},emoji:'⚙️',hint:{ar:'صناعة وطاقة ومدن صناعية',en:'Industry & energy'}},
-    {key:'asir',name:{ar:'أبها وعسير',en:'Abha & Asir'},emoji:'🌄',hint:{ar:'سياحة جبلية وساحلية',en:'Mountain & coastal tourism'}},
-    {key:'madinah',name:{ar:'المدينة المنورة',en:'Madinah'},emoji:'🕌',hint:{ar:'سياحة دينية وتراث',en:'Religious & heritage tourism'}}
+    {key:'riyadh',name:{ar:'الرياض',en:'Riyadh'},emoji:'🏙️',hint:{ar:'عاصمة المال والتقنية',en:'Capital of finance & tech'}},
+    {key:'jeddah',name:{ar:'جدة والغربية',en:'Jeddah'},emoji:'🌊',hint:{ar:'سياحة فاخرة وتجارة',en:'Luxury tourism'}},
+    {key:'neom',name:{ar:'نيوم وتبوك',en:'NEOM'},emoji:'⛰️',hint:{ar:'مستقبل السياحة والصناعة',en:'Future of industry'}},
+    {key:'eastern',name:{ar:'المنطقة الشرقية',en:'Eastern'},emoji:'⚙️',hint:{ar:'صناعة وطاقة',en:'Industry & energy'}},
+    {key:'asir',name:{ar:'عسير',en:'Asir'},emoji:'🌄',hint:{ar:'سياحة جبلية',en:'Mountain tourism'}},
+    {key:'madinah',name:{ar:'المدينة المنورة',en:'Madinah'},emoji:'🕌',hint:{ar:'سياحة دينية',en:'Religious tourism'}},
+    {key:'najran',name:{ar:'نجران',en:'Najran'},emoji:'🏔️',hint:{ar:'تراث وثقافة',en:'Heritage'}},
+    {key:'jazan',name:{ar:'جيزان',en:'Jazan'},emoji:'🌴',hint:{ar:'سياحة ساحلية',en:'Coastal tourism'}}
   ];
 
   var REGION_DATA={
-    riyadh:{tourism:{ar:'الرياض وجهة ترفيه وسياحة متنامية: القدية، الدرعية، وبوليفارد.',en:'Riyadh is a growing tourism hub: Qiddiya, Diriyah, Boulevard.'},tech:{ar:'نيوم الصناعية، شركة آلات، ومراكز البيانات العملاقة.',en:'NEOM Industrial, Alat, and giant data centers.'},health:{ar:'مجمع الملك عبدالله الطبي، المدن الطبية، والتحول الرقمي الصحي.',en:'King Abdullah Medical Complex and digital health transformation.'},entertainment:{ar:'القدية (9.8 مليار دولار)، موسم الرياض، والدرعية.',en:'Qiddiya ($9.8B), Riyadh Season, and Diriyah.'},education:{ar:'جامعات كبرى، مدارس دولية، وشركات EdTech.',en:'Major universities, int\'l schools, and EdTech.'},finance:{ar:'مركز الملك عبدالله المالي (KAFD) والبنوك العالمية.',en:'KAFD and global banks.'}},
-    jeddah:{tourism:{ar:'وجهة سياحة فاخرة: أتلانتس جدة، ون آند أونلي، البحر الأحمر.',en:'Luxury destination: Atlantis Jeddah, One&Only, Red Sea.'},tech:{ar:'شركات التجارة الإلكترونية واللوجستيات تبحث عن مطورين.',en:'E-commerce and logistics companies need developers.'},health:{ar:'مستشفيات كبرى ومراكز تخصصية.',en:'Major hospitals and specialty centers.'},entertainment:{ar:'موسم جدة، الكورنيش الجديد، وفعاليات على مدار العام.',en:'Jeddah Season, new corniche, year-round events.'},education:{ar:'جامعات ومدارس دولية.',en:'Universities and international schools.'},finance:{ar:'المركز المالي في الغربية.',en:'Western region financial hub.'}},
-    neom:{tourism:{ar:'ذا لاين، تروجينا، سندالة (3,500 وظيفة)، والبحر الأحمر.',en:'The Line, Trojena, Sindalah (3,500 jobs), Red Sea.'},tech:{ar:'أوكساغون الصناعية، والذكاء الاصطناعي، والمدن الذكية.',en:'Oxagon, AI, and smart cities.'},health:{ar:'مستشفيات نيوم الذكية والرعاية الرقمية.',en:'NEOM smart hospitals and digital care.'},entertainment:{ar:'تروجينا (مشروع الترفيه الجبلي)، وفعاليات عالمية.',en:'Trojena mountain entertainment, global events.'},education:{ar:'جامعات نيوم والمراكز البحثية.',en:'NEOM universities and research centers.'},finance:{ar:'نيوم كمركز استثماري عالمي.',en:'NEOM as a global investment hub.'}},
-    eastern:{tourism:{ar:'سياحة ساحلية وتراثية في الأحساء والقطيف.',en:'Coastal and heritage tourism in Al-Ahsa & Qatif.'},tech:{ar:'مدينة الملك سلمان للطاقة، والصناعات التقنية.',en:'King Salman Energy City and tech industries.'},health:{ar:'مستشفيات كبرى ومراكز تخصصية.',en:'Major hospitals and specialty centers.'},entertainment:{ar:'فعاليات في الدمام والخبر.',en:'Events in Dammam and Khobar.'},education:{ar:'جامعات ومراكز تدريب.',en:'Universities and training centers.'},finance:{ar:'مراكز مالية وبنوك في الدمام.',en:'Financial centers and banks in Dammam.'}},
-    asir:{tourism:{ar:'واجهة عسير البحرية، نجمة ونهر، وادي أبها (2.5 مليون م²).',en:'Asir Sea Front, Najma & Nahr, Wadi Abha (2.5M m²).'},tech:{ar:'مراكز تقنية ناشئة في أبها.',en:'Emerging tech hubs in Abha.'},health:{ar:'مستشفيات أبها ومراكز الرعاية.',en:'Abha hospitals and care centers.'},entertainment:{ar:'مهرجان صيف عسير (ملايين الزوار).',en:'Asir Summer Festival (millions of visitors).'},education:{ar:'جامعة الملك خالد.',en:'King Khalid University.'},finance:{ar:'فروع بنكية ومراكز أعمال.',en:'Bank branches and business centers.'}},
-    madinah:{tourism:{ar:'سياحة دينية وتراثية مع طلب على المرشدين والضيافة.',en:'Religious and heritage tourism with guide demand.'},tech:{ar:'مراكز تقنية ناشئة ومدينة المعرفة الاقتصادية.',en:'Tech hubs and Knowledge Economic City.'},health:{ar:'مستشفيات كبرى ومراكز طبية.',en:'Major hospitals and medical centers.'},entertainment:{ar:'فعاليات ثقافية وتراثية.',en:'Cultural and heritage events.'},education:{ar:'جامعة طيبة والجامعة الإسلامية.',en:'Taibah and Islamic University.'},finance:{ar:'مراكز مالية وبنوك.',en:'Financial centers and banks.'}}
+    riyadh:{tourism:{ar:'القدية والدرعية.',en:'Qiddiya & Diriyah.'},tech:{ar:'نيوم الصناعية ومراكز البيانات.',en:'NEOM Industrial.'},health:{ar:'المدن الطبية ومجمع الملك عبدالله.',en:'Medical cities.'},entertainment:{ar:'القدية وموسم الرياض.',en:'Qiddiya & Riyadh Season.'},education:{ar:'جامعات ومدارس.',en:'Universities.'},finance:{ar:'مركز الملك عبدالله المالي.',en:'KAFD.'},engineering:{ar:'المدينة الصناعية الثانية.',en:'Second Industrial City.'}},
+    jeddah:{tourism:{ar:'أتلانتس ون آند أونلي.',en:'Atlantis, One&Only.'},tech:{ar:'التجارة الإلكترونية.',en:'E-commerce.'},health:{ar:'مستشفيات كبرى.',en:'Major hospitals.'},entertainment:{ar:'موسم جدة.',en:'Jeddah Season.'},education:{ar:'جامعات دولية.',en:'Universities.'},finance:{ar:'المركز المالي الغربي.',en:'Financial hub.'},engineering:{ar:'مدينة جدة الصناعية.',en:'Industrial city.'}},
+    neom:{tourism:{ar:'ذا لاين وتروجينا.',en:'The Line, Trojena.'},tech:{ar:'أوكساغون.',en:'Oxagon.'},health:{ar:'مستشفيات ذكية.',en:'Smart hospitals.'},entertainment:{ar:'تروجينا الجبلية.',en:'Trojena.'},education:{ar:'جامعات نيوم.',en:'NEOM universities.'},finance:{ar:'مركز استثماري.',en:'Investment hub.'},engineering:{ar:'أوكساغون الصناعية.',en:'Oxagon industrial.'}},
+    eastern:{tourism:{ar:'الأحساء والقطيف.',en:'Al-Ahsa & Qatif.'},tech:{ar:'مدينة الملك سلمان للطاقة.',en:'King Salman Energy City.'},health:{ar:'مستشفيات كبرى.',en:'Major hospitals.'},entertainment:{ar:'الدمام والخبر.',en:'Dammam & Khobar.'},education:{ar:'جامعات.',en:'Universities.'},finance:{ar:'مراكز مالية.',en:'Financial centers.'},engineering:{ar:'أرامكو وسابك والجبيل.',en:'Aramco, SABIC, Jubail.'}},
+    asir:{tourism:{ar:'واجهة عسير البحرية.',en:'Asir Sea Front.'},tech:{ar:'مراكز تقنية ناشئة.',en:'Tech hubs.'},health:{ar:'مستشفيات عسير.',en:'Asir hospitals.'},entertainment:{ar:'مهرجان صيف عسير.',en:'Asir Summer Festival.'},education:{ar:'جامعة الملك خالد.',en:'KKU.'},finance:{ar:'فروع بنكية.',en:'Bank branches.'},engineering:{ar:'مصانع أسمنت.',en:'Cement factories.'}},
+    madinah:{tourism:{ar:'سياحة دينية وتراثية.',en:'Religious tourism.'},tech:{ar:'مدينة المعرفة.',en:'KEC.'},health:{ar:'مستشفيات كبرى.',en:'Major hospitals.'},entertainment:{ar:'فعاليات ثقافية.',en:'Cultural events.'},education:{ar:'جامعة طيبة.',en:'Taibah University.'},finance:{ar:'مراكز مالية.',en:'Financial centers.'},engineering:{ar:'مصانع التمور.',en:'Dates factories.'}},
+    najran:{tourism:{ar:'الأخدود وقصر سعدان.',en:'Al-Ukhdud.'},tech:{ar:'مراكز تقنية.',en:'Tech hubs.'},health:{ar:'مستشفى نجران.',en:'Najran Hospital.'},entertainment:{ar:'مهرجانات تراثية.',en:'Heritage festivals.'},education:{ar:'جامعة نجران.',en:'Najran University.'},finance:{ar:'فروع بنكية.',en:'Bank branches.'},engineering:{ar:'مصانع الأسمنت.',en:'Cement factories.'}},
+    jazan:{tourism:{ar:'جزر فرسان.',en:'Farasan Islands.'},tech:{ar:'مراكز تقنية.',en:'Tech hubs.'},health:{ar:'مستشفيات كبرى.',en:'Major hospitals.'},entertainment:{ar:'مهرجان جازان الشتوي.',en:'Jazan Winter Festival.'},education:{ar:'جامعة جازان.',en:'Jazan University.'},finance:{ar:'مراكز تجارية.',en:'Commercial centers.'},engineering:{ar:'مدينة جازان الصناعية.',en:'Jazan Industrial City.'}}
   };
 
   var GUIDE_DATA={
-    tourism:{emoji:'🧭',title:{ar:'مسار السياحة والضيافة',en:'Tourism & Hospitality Path'},
-      why:{ar:['تستمتع بتصميم التجارب والرحلات — هذا جوهر قطاع السياحة','تفضل التعامل مع الناس من ثقافات مختلفة','تبحث عن عمل يجمع بين الحركة والإبداع'],en:['You enjoy designing experiences — the heart of tourism','You love interacting with people from all cultures','You want work mixing motion and creativity']},
-      stats:[{n:'150M',l:{ar:'زيارة سنوية بحلول 2030',en:'annual visits by 2030'}},{n:'500K',l:{ar:'غرفة فندقية',en:'hotel rooms'}},{n:'851M',l:{ar:'ريال دعم للكوادر',en:'SAR talent support'}},{n:'147K',l:{ar:'يعملون حالياً',en:'currently working'}}],
-      actions:[
-        {t:{ar:'سجّل في منصة دروب',en:'Register on Doroob'},d:{ar:'22 شهادة مهنية + 12 دورة إلكترونية مجانية.',en:'22 professional certificates + 12 free courses.'},u:'https://doroob.sa',l:'doroob.sa'},
-        {t:{ar:'انضم لبرنامج تمهير',en:'Join Tamheer program'},d:{ar:'تدريب على رأس العمل في الفنادق مع مكافأة.',en:'On-the-job training with stipend.'},u:'https://hrdf.org.sa',l:'hrdf.org.sa'},
-        {t:{ar:'تقدّم لمنصة سبل',en:'Apply on Subol'},d:{ar:'جلسات إرشاد مهني مجانية.',en:'Free career counseling sessions.'},u:'https://subol.sa',l:'subol.sa'}
-      ]},
-    tech:{emoji:'💻',title:{ar:'مسار التقنية والابتكار',en:'Technology & Innovation Path'},
-      why:{ar:['تستمتع ببناء أشياء جديدة — هذا ما يفعله المبرمجون','تفكر بطريقة منطقية ومنهجية','تحب التحديات التقنية المعقدة'],en:['You love building new things','You think logically and methodically','You enjoy complex technical challenges']},
-      stats:[{n:'200+',l:{ar:'معسكر في أكاديمية طويق',en:'Tuwaiq bootcamps'}},{n:'80%',l:{ar:'توظيف خريجي طويق',en:'Tuwaiq grads hired'}},{n:'375K',l:{ar:'ريال دعم أطلق',en:'SAR from ATC'}},{n:'35K+',l:{ar:'خريج من طويق',en:'Tuwaiq graduates'}}],
-      actions:[
-        {t:{ar:'سجّل في أكاديمية طويق',en:'Register at Tuwaiq'},d:{ar:'200+ معسكر مجاني في البرمجة و AI.',en:'200+ free bootcamps in coding & AI.'},u:'https://tuwaiq.edu.sa',l:'tuwaiq.edu.sa'},
-        {t:{ar:'تقدّم لمسرعة أطلق',en:'Apply to ATC'},d:{ar:'دعم 375 ألف ريال + استشارات.',en:'SAR 375K + consulting.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'},
-        {t:{ar:'تصفّح وظائف جدارات',en:'Browse Jadarat'},d:{ar:'أكثر من 34 ألف وظيفة شاغرة.',en:'34K+ open jobs.'},u:'https://jadarat.sa',l:'jadarat.sa'}
-      ]},
-    health:{emoji:'🩺',title:{ar:'مسار الصحة والعافية',en:'Healthcare Path'},
-      why:{ar:['تهتم بمساعدة الناس وراحتهم','تتحمل المسؤولية وتعمل تحت الضغط','تبحث عن تأثير مباشر'],en:['You care about people','You handle responsibility','You seek direct impact']},
-      stats:[{n:'+70K',l:{ar:'مبتعث في الصحة',en:'health scholars'}},{n:'3K',l:{ar:'مكافأة تمهير',en:'Tamheer stipend'}},{n:'10K',l:{ar:'متدرب تمريض',en:'nursing trainees'}},{n:'50%',l:{ar:'دعم الرواتب',en:'salary support'}}],
-      actions:[
-        {t:{ar:'انضم لبرنامج تمهير',en:'Join Tamheer'},d:{ar:'تدريب في المستشفيات مع 3000 ريال.',en:'Hospital training with 3000 SAR.'},u:'https://hrdf.org.sa',l:'hrdf.org.sa'},
-        {t:{ar:'جلسة إرشاد من سبل',en:'Subol counseling'},d:{ar:'اختبار + جلسة مع مرشد.',en:'Test + counselor session.'},u:'https://subol.sa',l:'subol.sa'},
-        {t:{ar:'استكشف الابتعاث',en:'Explore scholarships'},d:{ar:'70 ألف مبتعث في الصحة.',en:'70K health scholarships.'},u:'https://sachs.edu.sa',l:'sachs.edu.sa'}
-      ]},
-    entertainment:{emoji:'🎬',title:{ar:'مسار الترفيه والرياضة',en:'Entertainment & Sports Path'},
-      why:{ar:['تحب خلق لحظات سعيدة','تفكر بطريقة إبداعية','تزدهر في البيئات الحيوية'],en:['You love creating joy','You think creatively','You thrive in vibrant spaces']},
-      stats:[{n:'9.8B$',l:{ar:'استثمار في القدية',en:'invested in Qiddiya'}},{n:'200+',l:{ar:'وظيفة حالياً',en:'current jobs'}},{n:'100K',l:{ar:'زائر يومي متوقع',en:'expected daily visitors'}},{n:'40',l:{ar:'دقيقة من الرياض',en:'min from Riyadh'}}],
-      actions:[
-        {t:{ar:'قدّم لوظائف القدية',en:'Apply to Qiddiya'},d:{ar:'200+ فرصة في الترفيه والأمن.',en:'200+ opportunities.'},u:'https://qiddiya.com',l:'qiddiya.com'},
-        {t:{ar:'سجّل في مسرعة أطلق',en:'Apply to ATC'},d:{ar:'375 ألف ريال للشركات الناشئة.',en:'SAR 375K for startups.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'},
-        {t:{ar:'أكاديمية منشآت',en:'Monshaat Academy'},d:{ar:'دورات مجانية في الريادة.',en:'Free entrepreneurship courses.'},u:'https://monshaat.gov.sa',l:'monshaat.gov.sa'}
-      ]},
-    education:{emoji:'📚',title:{ar:'مسار التعليم',en:'Education Path'},
-      why:{ar:['تستمتع بمساعدة الآخرين على الفهم','تصبر وتشرح بوضوح','تبحث عن أثر طويل المدى'],en:['You love helping others learn','You\'re patient and clear','You seek long-term impact']},
-      stats:[{n:'70K',l:{ar:'مبتعث بحلول 2030',en:'scholars by 2030'}},{n:'500K+',l:{ar:'مستفيد من مسك',en:'Misk beneficiaries'}},{n:'95%',l:{ar:'استعدوا مهنياً',en:'job-ready'}},{n:'12K+',l:{ar:'ساعة تدريبية',en:'training hours'}}],
-      actions:[
-        {t:{ar:'سجّل في مسك المهارات',en:'Register at Misk Skills'},d:{ar:'برامج إعداد مهني مع خبراء.',en:'Career prep with experts.'},u:'https://hub.misk.org.sa',l:'misk.org.sa'},
-        {t:{ar:'قدّم على الابتعاث',en:'Apply for scholarship'},d:{ar:'برنامج خادم الحرمين.',en:'Custodian of Two Mosques program.'},u:'https://sachs.edu.sa',l:'sachs.edu.sa'},
-        {t:{ar:'جرّب جدارات',en:'Try Jadarat'},d:{ar:'وظائف تعليمية وطنية.',en:'National education jobs.'},u:'https://jadarat.sa',l:'jadarat.sa'}
-      ]},
-    finance:{emoji:'📊',title:{ar:'مسار المال والأعمال',en:'Finance & Business Path'},
-      why:{ar:['تفكر بالنمو والفرص والمخاطر','تحب الأرقام والتحليل','تبحث عن نتائج ملموسة'],en:['You think in growth & risk','You love numbers','You seek measurable results']},
-      stats:[{n:'600K',l:{ar:'وظيفة جديدة في الرياض',en:'new jobs in Riyadh'}},{n:'3T$',l:{ar:'سوق الأسهم المستهدف',en:'target stock market'}},{n:'375K',l:{ar:'ريال دعم أطلق',en:'SAR from ATC'}},{n:'158+',l:{ar:'دورة في منشآت',en:'Monshaat courses'}}],
-      actions:[
-        {t:{ar:'أكاديمية منشآت',en:'Monshaat Academy'},d:{ar:'158+ دورة مجانية في الريادة.',en:'158+ free entrepreneurship courses.'},u:'https://monshaat.gov.sa',l:'monshaat.gov.sa'},
-        {t:{ar:'تقدّم لمسرعة أطلق',en:'Apply to ATC'},d:{ar:'دعم الشركات الناشئة بـ 375K.',en:'SAR 375K startup support.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'},
-        {t:{ar:'وظائف جدارات',en:'Jadarat jobs'},d:{ar:'وظائف بنكية واستثمارية.',en:'Banking & investment jobs.'},u:'https://jadarat.sa',l:'jadarat.sa'}
-      ]}
+    tourism:{emoji:'🧭',title:{ar:'مسار السياحة والضيافة',en:'Tourism & Hospitality'},why:{ar:['تستمتع بتصميم التجارب والرحلات','تفضل التعامل مع الناس من ثقافات مختلفة','تبحث عن عمل يجمع بين الحركة والإبداع'],en:['You enjoy designing experiences','You love interacting with people','You want work mixing motion & creativity']},stats:[{n:'150M',l:{ar:'زيارة سنوية 2030',en:'annual visits 2030'}},{n:'500K',l:{ar:'غرفة فندقية',en:'hotel rooms'}},{n:'851M',l:{ar:'ريال دعم للكوادر',en:'SAR support'}},{n:'147K',l:{ar:'يعملون حالياً',en:'working now'}}],actions:[{t:{ar:'سجّل في دروب',en:'Join Doroob'},d:{ar:'22 شهادة + 12 دورة.',en:'22 certificates + 12 courses.'},u:'https://doroob.sa',l:'doroob.sa'},{t:{ar:'انضم لتمهير',en:'Join Tamheer'},d:{ar:'تدريب مع مكافأة.',en:'Training with stipend.'},u:'https://hrdf.org.sa',l:'hrdf.org.sa'},{t:{ar:'تقدّم لمنصة سبل',en:'Apply on Subol'},d:{ar:'إرشاد مهني مجاني.',en:'Free counseling.'},u:'https://subol.sa',l:'subol.sa'}]},
+    tech:{emoji:'💻',title:{ar:'مسار التقنية والابتكار',en:'Technology & Innovation'},why:{ar:['تستمتع ببناء أشياء جديدة','تفكر بطريقة منطقية','تحب التحديات التقنية'],en:['You love building new things','You think logically','You enjoy challenges']},stats:[{n:'200+',l:{ar:'معسكر في طويق',en:'Tuwaiq bootcamps'}},{n:'80%',l:{ar:'توظيف خريجي طويق',en:'grads hired'}},{n:'375K',l:{ar:'ريال دعم أطلق',en:'SAR from ATC'}},{n:'35K+',l:{ar:'خريج من طويق',en:'graduates'}}],actions:[{t:{ar:'سجّل في طويق',en:'Register at Tuwaiq'},d:{ar:'200+ معسكر مجاني.',en:'200+ free bootcamps.'},u:'https://tuwaiq.edu.sa',l:'tuwaiq.edu.sa'},{t:{ar:'تقدّم لمسرعة أطلق',en:'Apply to ATC'},d:{ar:'دعم 375 ألف ريال.',en:'SAR 375K support.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'},{t:{ar:'تصفّح جدارات',en:'Browse Jadarat'},d:{ar:'34 ألف وظيفة.',en:'34K jobs.'},u:'https://jadarat.sa',l:'jadarat.sa'}]},
+    health:{emoji:'🩺',title:{ar:'مسار الصحة والطب',en:'Health & Medicine'},why:{ar:['تهتم بمساعدة الناس وراحتهم','تتحمل المسؤولية تحت الضغط','تبحث عن تأثير مباشر'],en:['You care about people','You handle responsibility','You seek direct impact']},stats:[{n:'+70K',l:{ar:'مبتعث في الصحة',en:'health scholars'}},{n:'3K',l:{ar:'مكافأة تمهير',en:'stipend'}},{n:'10K',l:{ar:'متدرب تمريض',en:'nursing trainees'}},{n:'50%',l:{ar:'دعم الرواتب',en:'salary support'}}],actions:[{t:{ar:'انضم لتمهير',en:'Join Tamheer'},d:{ar:'تدريب في المستشفيات.',en:'Hospital training.'},u:'https://hrdf.org.sa',l:'hrdf.org.sa'},{t:{ar:'جلسة إرشاد من سبل',en:'Subol counseling'},d:{ar:'اختبار + مرشد.',en:'Test + counselor.'},u:'https://subol.sa',l:'subol.sa'},{t:{ar:'استكشف الابتعاث',en:'Explore scholarships'},d:{ar:'70 ألف مبتعث.',en:'70K scholars.'},u:'https://sachs.edu.sa',l:'sachs.edu.sa'}]},
+    entertainment:{emoji:'🎬',title:{ar:'مسار الترفيه والرياضة',en:'Entertainment & Sports'},why:{ar:['تحب خلق لحظات سعيدة','تفكر بطريقة إبداعية','تزدهر في البيئات الحيوية'],en:['You love creating joy','You think creatively','You thrive in vibrant spaces']},stats:[{n:'9.8B$',l:{ar:'استثمار في القدية',en:'Qiddiya investment'}},{n:'200+',l:{ar:'وظيفة حالياً',en:'current jobs'}},{n:'100K',l:{ar:'زائر يومي متوقع',en:'daily visitors'}},{n:'40',l:{ar:'دقيقة من الرياض',en:'min from Riyadh'}}],actions:[{t:{ar:'قدّم للقدية',en:'Apply to Qiddiya'},d:{ar:'200+ فرصة.',en:'200+ jobs.'},u:'https://qiddiya.com',l:'qiddiya.com'},{t:{ar:'مسرعة أطلق',en:'Apply to ATC'},d:{ar:'375 ألف ريال.',en:'SAR 375K.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'},{t:{ar:'أكاديمية منشآت',en:'Monshaat Academy'},d:{ar:'دورات مجانية.',en:'Free courses.'},u:'https://monshaat.gov.sa',l:'monshaat.gov.sa'}]},
+    education:{emoji:'📚',title:{ar:'مسار التعليم',en:'Education'},why:{ar:['تستمتع بمساعدة الآخرين','تصبر وتشرح بوضوح','تبحث عن أثر طويل المدى'],en:['You love helping others learn','You\'re patient and clear','You seek long-term impact']},stats:[{n:'70K',l:{ar:'مبتعث بحلول 2030',en:'scholars by 2030'}},{n:'500K+',l:{ar:'مستفيد من مسك',en:'Misk users'}},{n:'95%',l:{ar:'استعدوا مهنياً',en:'job-ready'}},{n:'12K+',l:{ar:'ساعة تدريبية',en:'training hours'}}],actions:[{t:{ar:'سجّل في مسك',en:'Register at Misk'},d:{ar:'برامج إعداد مهني.',en:'Career prep.'},u:'https://hub.misk.org.sa',l:'misk.org.sa'},{t:{ar:'قدّم للابتعاث',en:'Apply for scholarship'},d:{ar:'برنامج خادم الحرمين.',en:'Custodian program.'},u:'https://sachs.edu.sa',l:'sachs.edu.sa'},{t:{ar:'جرّب جدارات',en:'Try Jadarat'},d:{ar:'وظائف تعليمية.',en:'Education jobs.'},u:'https://jadarat.sa',l:'jadarat.sa'}]},
+    finance:{emoji:'📊',title:{ar:'مسار المال والأعمال',en:'Finance & Business'},why:{ar:['تفكر بالنمو والمخاطر','تحب الأرقام والتحليل','تبحث عن نتائج ملموسة'],en:['You think in growth & risk','You love numbers','You seek measurable results']},stats:[{n:'600K',l:{ar:'وظيفة جديدة في الرياض',en:'new jobs'}},{n:'3T$',l:{ar:'سوق الأسهم المستهدف',en:'target market'}},{n:'375K',l:{ar:'ريال دعم أطلق',en:'SAR from ATC'}},{n:'158+',l:{ar:'دورة في منشآت',en:'Monshaat courses'}}],actions:[{t:{ar:'أكاديمية منشآت',en:'Monshaat Academy'},d:{ar:'158+ دورة مجانية.',en:'158+ free courses.'},u:'https://monshaat.gov.sa',l:'monshaat.gov.sa'},{t:{ar:'مسرعة أطلق',en:'Apply to ATC'},d:{ar:'دعم 375 ألف.',en:'SAR 375K.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'},{t:{ar:'وظائف جدارات',en:'Jadarat jobs'},d:{ar:'وظائف بنكية.',en:'Banking jobs.'},u:'https://jadarat.sa',l:'jadarat.sa'}]},
+    engineering:{emoji:'🏗️',title:{ar:'مسار الهندسة والتصنيع',en:'Engineering & Manufacturing'},why:{ar:['تفكر بالأنظمة والعمليات','تحب الأرقام الدقيقة','تبحث عن بناء أشياء تدوم'],en:['You think in systems','You love precision','You seek lasting things']},stats:[{n:'+1000',l:{ar:'مصنع جديد بحلول 2030',en:'new factories by 2030'}},{n:'36B$',l:{ar:'استثمار صناعي',en:'industrial investment'}},{n:'200K',l:{ar:'وظيفة مستهدفة',en:'target jobs'}},{n:'13%',l:{ar:'مساهمة في الناتج',en:'GDP contribution'}}],actions:[{t:{ar:'سجّل في هيئة المهندسين',en:'Register at Saudi Council'},d:{ar:'اعتماد مهني.',en:'Accreditation.'},u:'https://saudieng.sa',l:'saudieng.sa'},{t:{ar:'تمهير الهندسي',en:'Join Tamheer'},d:{ar:'تدريب في المصانع.',en:'Factory training.'},u:'https://hrdf.org.sa',l:'hrdf.org.sa'},{t:{ar:'مسرعة أطلق',en:'Apply to ATC'},d:{ar:'دعم 375 ألف.',en:'SAR 375K.'},u:'https://ntdp.gov.sa',l:'ntdp.gov.sa'}]}
   };
 
   var QUESTIONS={
     ar:[
-      {q:'ما نوع المشكلة التي تستمتع بحلها أكثر؟',o:[['تصميم رحلة سياحية لا تُنسى','tourism'],['حل خلل برمجي معقّد','tech'],['معرفة سبب شعور شخص بالتعب','health'],['جعل فعالية أكثر إثارة','entertainment'],['تبسيط فكرة صعبة للجميع','education'],['إيجاد أذكى طريقة لتنمية الميزانية','finance']]},
-      {q:'عطلة نهاية أسبوعك المثالية:',o:[['استكشاف مدينة أو موقع تاريخي','tourism'],['بناء مشروع تقني شخصي','tech'],['التطوع في عيادة أو مساعدة مريض','health'],['حضور حفلة أو مباراة','entertainment'],['القراءة أو تدريس صديق','education'],['متابعة الاستثمارات والتخطيط المالي','finance']]},
-      {q:'أي مشروع من رؤية 2030 يحمسك أكثر؟',o:[['منتجعات البحر الأحمر','tourism'],['نيوم والمدن الذكية','tech'],['المستشفيات والتقنية الصحية','health'],['مدينة القدية الترفيهية','entertainment'],['برامج التعليم والمهارات','education'],['الرياض مركز مالي عالمي','finance']]},
-      {q:'أصدقاؤك يصفونك بأنك...',o:[['المضيف المغامر','tourism'],['من يصلح مشاكل التقنية','tech'],['الحنون عند المرض','health'],['روح الحفلة','entertainment'],['الصبور الشارح','education'],['المخطط للميزانية','finance']]},
-      {q:'اختر عنوان خبر تحب أن تقرأه عنك:',o:[['«مرشد يحوّل وجهة مجهولة إلى مقصد»','tourism'],['«مهندس يبني تطبيقًا للملايين»','tech'],['«ممرضة تُشاد برعايتها الإنسانية»','health'],['«منتج وراء أكبر مهرجان»','entertainment'],['«معلم يغيّر طريقة التعلم»','education'],['«محلل يكتشف فرصة استثمارية»','finance']]},
-      {q:'ما أهم شيء في وظيفتك؟',o:[['التعرف على أشخاص من العالم','tourism'],['بناء أشياء جديدة','tech'],['إحداث فرق في حياة إنسان','health'],['خلق لحظات لا تُنسى','entertainment'],['مساعدة الآخرين على النمو','education'],['رؤية نمو ونتائج ملموسة','finance']]},
-      {q:'أداة تحب أن تتقنها:',o:[['كاميرا وخريطة','tourism'],['حاسوب وبيئة برمجة','tech'],['سماعة طبية وملفات','health'],['ميكروفون ومسرح','entertainment'],['سبورة وخطة درس','education'],['جدول بيانات ومؤشر أسهم','finance']]},
-      {q:'في العمل الجماعي، أنت من...',o:[['ينظم ويجعل الأمر ممتعًا','tourism'],['يبني المنتج فعليًا','tech'],['يهتم براحة الجميع','health'],['يطرح الفكرة الإبداعية','entertainment'],['يبقي الفريق على المسار','education'],['يدير الميزانية والوقت','finance']]},
-      {q:'المادة المفضلة في المدرسة:',o:[['الجغرافيا والاجتماعيات','tourism'],['الحاسب والرياضيات','tech'],['الأحياء والكيمياء','health'],['الفن أو المسرح أو الرياضة','entertainment'],['اللغات والتواصل','education'],['الاقتصاد والأعمال','finance']]},
-      {q:'بتمويل غير محدود، ستطلق:',o:[['سلسلة فنادق بوتيك','tourism'],['شركة AI أو روبوتات','tech'],['عيادة للمناطق النائية','health'],['منشأة رياضية أو ترفيهية','entertainment'],['منصة تعليمية مجانية','education'],['صندوق للشركات الناشئة','finance']]}
+      {q:'ما نوع المشكلة التي تستمتع بحلها أكثر؟',o:[['تصميم رحلة سياحية لا تُنسى','tourism'],['حل خلل برمجي معقّد','tech'],['معرفة سبب شعور شخص بالتعب','health'],['جعل فعالية أكثر إثارة','entertainment'],['تبسيط فكرة صعبة للجميع','education'],['إيجاد أذكى طريقة لتنمية الميزانية','finance'],['تصميم نظام أو آلة تنتج بكفاءة','engineering']]},
+      {q:'عطلة نهاية أسبوعك المثالية:',o:[['استكشاف مدينة أو موقع تاريخي','tourism'],['بناء مشروع تقني شخصي','tech'],['التطوع في عيادة','health'],['حضور حفلة أو مباراة','entertainment'],['القراءة أو تدريس صديق','education'],['متابعة الاستثمارات','finance'],['تفكيك جهاز وإعادة تركيبه','engineering']]},
+      {q:'أي مشروع من رؤية 2030 يحمسك أكثر؟',o:[['منتجعات البحر الأحمر','tourism'],['نيوم والمدن الذكية','tech'],['المستشفيات والتقنية الصحية','health'],['مدينة القدية','entertainment'],['برامج التعليم والمهارات','education'],['الرياض مركز مالي عالمي','finance'],['أوكساغون الصناعية','engineering']]},
+      {q:'أصدقاؤك يصفونك بأنك...',o:[['المضيف المغامر','tourism'],['من يصلح مشاكل التقنية','tech'],['الحنون عند المرض','health'],['روح الحفلة','entertainment'],['الصبور الشارح','education'],['المخطط للميزانية','finance'],['من يفكك ويُصلح','engineering']]},
+      {q:'اختر عنوان خبر تحب أن تقرأه عنك:',o:[['«مرشد يحوّل وجهة مجهولة إلى مقصد»','tourism'],['«مهندس يبني تطبيقًا للملايين»','tech'],['«طبيب يُنقذ حياة إنسان»','health'],['«منتج وراء أكبر مهرجان»','entertainment'],['«معلم يغيّر طريقة التعلم»','education'],['«محلل يكتشف فرصة استثمارية»','finance'],['«مهندس يبتكر مصنعًا ذكيًا»','engineering']]},
+      {q:'ما أهم شيء في وظيفتك؟',o:[['التعرف على أشخاص من العالم','tourism'],['بناء أشياء جديدة','tech'],['إحداث فرق في حياة إنسان','health'],['خلق لحظات لا تُنسى','entertainment'],['مساعدة الآخرين على النمو','education'],['رؤية نمو ونتائج','finance'],['رؤية منتج صنعته بيدك','engineering']]},
+      {q:'أداة تحب أن تتقنها:',o:[['كاميرا وخريطة','tourism'],['حاسوب وبيئة برمجة','tech'],['سماعة طبية وملفات','health'],['ميكروفون ومسرح','entertainment'],['سبورة وخطة درس','education'],['جدول بيانات ومؤشر أسهم','finance'],['رسم هندسي وأدوات قياس','engineering']]},
+      {q:'في العمل الجماعي، أنت من...',o:[['ينظم ويجعل الأمر ممتعًا','tourism'],['يبني المنتج فعليًا','tech'],['يهتم براحة الجميع','health'],['يطرح الفكرة الإبداعية','entertainment'],['يبقي الفريق على المسار','education'],['يدير الميزانية','finance'],['يحل المشاكل التقنية','engineering']]},
+      {q:'المادة المفضلة في المدرسة:',o:[['الجغرافيا والاجتماعيات','tourism'],['الحاسب والرياضيات','tech'],['الأحياء والكيمياء','health'],['الفن أو المسرح','entertainment'],['اللغات والتواصل','education'],['الاقتصاد والأعمال','finance'],['الفيزياء والرياضيات','engineering']]},
+      {q:'بتمويل غير محدود، ستطلق:',o:[['سلسلة فنادق بوتيك','tourism'],['شركة AI أو روبوتات','tech'],['مستشفى أو عيادة متطورة','health'],['منشأة رياضية','entertainment'],['منصة تعليمية','education'],['صندوق للشركات الناشئة','finance'],['مصنعًا ذكيًا','engineering']]}
     ],
     en:[
-      {q:'What kind of problem do you enjoy solving most?',o:[['Designing an unforgettable travel experience','tourism'],['Debugging a tricky piece of code','tech'],['Figuring out what\'s making someone unwell','health'],['Making an event more exciting','entertainment'],['Explaining a hard concept so it clicks','education'],['Finding the smartest way to grow a budget','finance']]},
-      {q:'Pick your ideal weekend:',o:[['Exploring a new city or historic site','tourism'],['Building a side project','tech'],['Volunteering at a clinic or helping someone recover','health'],['At a concert, game or film set','entertainment'],['Reading, researching or tutoring','education'],['Tracking investments or planning a budget','finance']]},
-      {q:'Which Vision 2030 project excites you most?',o:[['Red Sea resorts & new tourism destinations','tourism'],['NEOM\'s smart cities & AI','tech'],['New hospitals & health-tech','health'],['Qiddiya\'s entertainment city','entertainment'],['National education & skills programs','education'],['Riyadh as a global financial hub','finance']]},
-      {q:'Your friends would describe you as...',o:[['The adventurous host who plans the trip','tourism'],['The one who fixes everyone\'s tech','tech'],['The caring one everyone calls when unwell','health'],['The life of the party','entertainment'],['The patient one who explains things well','education'],['The planner with a budget spreadsheet','finance']]},
-      {q:'Pick a headline you\'d love to read about yourself:',o:[['"Local guide turns hidden gem into must-visit spot"','tourism'],['"Young engineer builds app used by millions"','tech'],['"Nurse praised for compassionate care"','health'],['"Producer behind the region\'s biggest festival"','entertainment'],['"Teacher transforms how students learn"','education'],['"Analyst spots the next big investment trend"','finance']]},
-      {q:'What\'s most important to you in a job?',o:[['Meeting people from around the world','tourism'],['Building things that didn\'t exist before','tech'],['Making a direct difference in someone\'s life','health'],['Creating moments people will remember','entertainment'],['Helping others grow and succeed','education'],['Seeing measurable growth and results','finance']]},
-      {q:'Pick a tool you\'d want to master:',o:[['A camera and a city map','tourism'],['A laptop and a coding IDE','tech'],['A stethoscope and patient charts','health'],['A microphone and a stage','entertainment'],['A whiteboard and a lesson plan','education'],['A spreadsheet and a stock ticker','finance']]},
-      {q:'In a group project, you\'re usually the one who...',o:[['Plans logistics and makes it fun','tourism'],['Builds the actual product','tech'],['Looks out for everyone\'s wellbeing','health'],['Pitches the big creative idea','entertainment'],['Keeps everyone on track','education'],['Manages budget and timeline','finance']]},
-      {q:'Favorite subject in school:',o:[['Geography & social studies','tourism'],['Computer science & math','tech'],['Biology & chemistry','health'],['Art, drama or PE','entertainment'],['Languages & communication','education'],['Economics & business','finance']]},
-      {q:'With unlimited funding, you\'d launch:',o:[['A boutique hotel chain','tourism'],['An AI or robotics startup','tech'],['A clinic for remote areas','health'],['A sports or entertainment venue','entertainment'],['A free online learning platform','education'],['An investment fund for startups','finance']]}
+      {q:'What kind of problem do you enjoy solving most?',o:[['Designing a travel experience','tourism'],['Debugging code','tech'],['Diagnosing illness','health'],['Making events exciting','entertainment'],['Explaining hard concepts','education'],['Growing a budget','finance'],['Designing efficient machines','engineering']]},
+      {q:'Pick your ideal weekend:',o:[['Exploring a new city','tourism'],['Building a side project','tech'],['Volunteering at a clinic','health'],['At a concert','entertainment'],['Reading or tutoring','education'],['Tracking investments','finance'],['Taking apart a device','engineering']]},
+      {q:'Which Vision 2030 project excites you most?',o:[['Red Sea resorts','tourism'],['NEOM smart cities','tech'],['New hospitals','health'],['Qiddiya entertainment','entertainment'],['Education programs','education'],['Riyadh financial hub','finance'],['Oxagon industrial','engineering']]},
+      {q:'Your friends would describe you as...',o:[['The adventurous host','tourism'],['The tech fixer','tech'],['The caring one','health'],['The life of the party','entertainment'],['The patient explainer','education'],['The budget planner','finance'],['The fixer of everything','engineering']]},
+      {q:'Pick a headline you\'d love:',o:[['"Local guide turns hidden gem into must-visit"','tourism'],['"Engineer builds app used by millions"','tech'],['"Doctor saves a life"','health'],['"Producer behind biggest festival"','entertainment'],['"Teacher transforms how students learn"','education'],['"Analyst spots the next trend"','finance'],['"Engineer designs zero-worker factory"','engineering']]},
+      {q:'What\'s most important to you in a job?',o:[['Meeting people worldwide','tourism'],['Building new things','tech'],['Making a difference','health'],['Creating moments','entertainment'],['Helping others grow','education'],['Measurable results','finance'],['Seeing a real product','engineering']]},
+      {q:'Pick a tool you\'d master:',o:[['A camera and a map','tourism'],['A laptop and an IDE','tech'],['A stethoscope','health'],['A microphone','entertainment'],['A whiteboard','education'],['A spreadsheet','finance'],['Engineering drawings','engineering']]},
+      {q:'In a group project, you\'re the one who...',o:[['Plans logistics','tourism'],['Builds the product','tech'],['Looks out for everyone','health'],['Pitches the big idea','entertainment'],['Keeps everyone on track','education'],['Manages budget','finance'],['Solves the hard problems','engineering']]},
+      {q:'Favorite subject:',o:[['Geography','tourism'],['Computer science & math','tech'],['Biology & chemistry','health'],['Art or PE','entertainment'],['Languages','education'],['Economics','finance'],['Physics','engineering']]},
+      {q:'With unlimited funding, you\'d launch:',o:[['A boutique hotel chain','tourism'],['An AI startup','tech'],['A modern hospital','health'],['A sports venue','entertainment'],['A learning platform','education'],['An investment fund','finance'],['A smart factory','engineering']]}
     ]
   };
 
@@ -234,6 +243,7 @@
   var answers=new Array(TOTAL).fill(null);
   var selectedRegion=null;
   var scores={};
+  var currentScreenId='screen-welcome';
   var $=function(id){return document.getElementById(id)};
 
   function loadVideo(el,urls,cb){
@@ -242,11 +252,13 @@
       if(i>=urls.length){el.style.display='none';if(cb)cb(false);return;}
       el.src=urls[i++];el.load();
     }
-    el.onloadeddata=function(){
+    el.oncanplay=function(){
       var p=el.play();if(p&&p.catch)p.catch(function(){});
       if(cb)cb(true);
     };
     el.onerror=next;
+    var timer=setTimeout(next,6000);
+    el.addEventListener('canplay',function(){clearTimeout(timer);},{once:true});
     next();
   }
 
@@ -275,33 +287,84 @@
     }
   })();
 
+  (function(){
+    var aura=$('bgAura');if(!aura)return;
+    if(window.matchMedia('(hover: none)').matches)return;
+    document.addEventListener('mousemove',function(e){
+      var mx=(e.clientX/window.innerWidth-.5);
+      var my=(e.clientY/window.innerHeight-.5);
+      aura.style.transform='translate('+(mx*-22)+'px,'+(my*-22)+'px) scale(1.06)';
+    });
+  })();
+
+  (function(){
+    var v=$('heroVideo');
+    if(v){v.play().catch(function(){});v.addEventListener('error',function(){v.style.display='none';},true);}
+    var dust=$('heroDust');
+    if(dust){
+      for(var i=0;i<18;i++){
+        var s=document.createElement('span');
+        s.style.left=(Math.random()*100)+'%';s.style.bottom='-10px';
+        s.style.animationDuration=(6+Math.random()*8)+'s';
+        s.style.animationDelay=(-Math.random()*8)+'s';
+        var size=2+Math.random()*3;s.style.width=size+'px';s.style.height=size+'px';
+        dust.appendChild(s);
+      }
+    }
+  })();
+
+  function showScreen(id){
+    var screens=document.querySelectorAll('.screen');
+    var target=document.getElementById(id);
+    if(!target)return;
+    for(var i=0;i<screens.length;i++){
+      var el=screens[i];
+      if(el.classList.contains('active')&&el!==target){
+        el.classList.remove('active');el.classList.add('leaving');
+        (function(node){setTimeout(function(){node.classList.remove('leaving');},800);})(el);
+      }
+    }
+    target.classList.remove('leaving');
+    void target.offsetWidth;
+    target.classList.add('active');
+    currentScreenId=id;
+    updateHomeBtn();
+  }
+
+  function updateHomeBtn(){
+    var btn=$('homeBtn');if(!btn)return;
+    if(currentScreenId==='screen-welcome'){btn.classList.remove('visible');}
+    else{btn.classList.add('visible');}
+  }
+
+  function goHome(){
+    $('guidePage').classList.remove('active');
+    document.body.style.overflow='';
+    setMood(null);
+    cur=0;answers=new Array(TOTAL).fill(null);selectedRegion=null;scores={};
+    showScreen('screen-welcome');
+  }
+
   function applyLang(){
     document.documentElement.lang=LANG;
     document.documentElement.dir=LANG==='ar'?'rtl':'ltr';
     document.title=T('title');
-
     var els=document.querySelectorAll('[data-i18n]');
     for(var i=0;i<els.length;i++){
       var k=els[i].getAttribute('data-i18n');
       if(I18N[LANG][k]) els[i].textContent=I18N[LANG][k];
     }
-
     $('langAr').setAttribute('aria-pressed',String(LANG==='ar'));
     $('langEn').setAttribute('aria-pressed',String(LANG==='en'));
-
     renderMosaic();
     checkLast();
-
-    var active=document.querySelector('.screen.active');
-    if(active){
-      if(active.id==='screen-quiz') renderQuestion(false);
-      else if(active.id==='screen-region') renderRegions();
-      else if(active.id==='screen-result' && Object.keys(scores).length) renderResult();
-    }
+    if(currentScreenId==='screen-quiz') renderQuestion(false);
+    else if(currentScreenId==='screen-region') renderRegions();
+    else if(currentScreenId==='screen-result' && Object.keys(scores).length) renderResult();
   }
 
   function setLang(lang){
-    if(lang===LANG) return;
+    if(lang===LANG)return;
     LANG=lang;
     try{localStorage.setItem('v2030_lang',LANG);}catch(e){}
     applyLang();
@@ -309,40 +372,23 @@
 
   function renderMosaic(){
     var m=$('mosaic');if(!m)return;m.innerHTML='';
-    var rots=[-5,4,-3,5,-4,3];
+    var rots=[-5,4,-3,5,-4,3,-4];
     KEYS.forEach(function(k,i){
       var f=document.createElement('figure');f.className='tile';
       f.style.setProperty('--rot',rots[i]+'deg');
-      f.style.setProperty('--delay',(i*.32)+'s');
+      f.style.setProperty('--delay',(i*.28)+'s');
       f.style.setProperty('--halo',COLOR[k]);
-
       var img=document.createElement('img');
       img.src=PHOTO[k];img.alt='';img.style.zIndex='0';
-
       var v=document.createElement('video');
       v.muted=true;v.loop=true;v.playsInline=true;v.preload='metadata';
       v.setAttribute('muted','');v.setAttribute('playsinline','');
-      v.poster=PHOTO[k];
-      v.style.opacity='0';v.style.transition='opacity .6s';
-
+      v.poster=PHOTO[k];v.style.opacity='0';v.style.transition='opacity .6s';
       f.appendChild(img);f.appendChild(v);
-      var c=document.createElement('figcaption');
-      c.textContent=SECTORS[LANG][k].name;
-      f.appendChild(c);
+      var c=document.createElement('figcaption');c.textContent=SECTORS[LANG][k].name;f.appendChild(c);
       m.appendChild(f);
-
-      setTimeout(function(){
-        loadVideo(v,VIDEOS[k],function(ok){
-          if(ok) v.style.opacity='1';
-        });
-      }, i*200 + 300);
+      setTimeout(function(){loadVideo(v,VIDEOS[k],function(ok){if(ok)v.style.opacity='1';});},i*220+400);
     });
-  }
-
-  function showScreen(id){
-    var s=document.querySelectorAll('.screen');
-    for(var i=0;i<s.length;i++)s[i].classList.remove('active');
-    var el=document.getElementById(id);if(el)el.classList.add('active');
   }
 
   function countTo(el,target,dur){
@@ -360,8 +406,7 @@
   }
 
   function renderQuestion(animate){
-    var qs=QUESTIONS[LANG];
-    var q=qs[cur];
+    var qs=QUESTIONS[LANG];var q=qs[cur];
     $('qText').textContent=q.q;
     $('ringNum').textContent=cur+1;
     $('stepLabel').textContent=Tf('progress',{n:cur+1,t:TOTAL});
@@ -384,19 +429,28 @@
 
   function pick(sector){
     answers[cur]=sector;
-    if(navigator.vibrate){try{navigator.vibrate(18);}catch(e){}}
+    if(navigator.vibrate){try{navigator.vibrate(22);}catch(e){}}
     var btns=$('options').querySelectorAll('.opt');
-    for(var i=0;i<btns.length;i++)btns[i].disabled=true;
-    var ch=$('options').querySelector('[data-sector="'+sector+'"]');
-    if(ch)ch.classList.add('picked');
+    var chosen=null;
+    for(var i=0;i<btns.length;i++){
+      btns[i].disabled=true;
+      if(btns[i].dataset.sector===sector && !chosen)chosen=btns[i];
+    }
+    if(chosen)chosen.classList.add('picked');
+    for(var j=0;j<btns.length;j++){
+      if(btns[j]!==chosen){
+        btns[j].style.animationDelay=(j*0.045)+'s';
+        btns[j].classList.add('opt-fall');
+      }
+    }
     playMainVideo(sector);setMood(sector);
     setTimeout(function(){
       var c=$('qCard');c.classList.remove('enter');void c.offsetWidth;c.classList.add('exit');
       setTimeout(function(){
         if(cur<TOTAL-1){cur++;renderQuestion(true);}
         else showRegionScreen();
-      },360);
-    },440);
+      },420);
+    },750);
   }
 
   function showRegionScreen(){showScreen('screen-region');renderRegions();}
@@ -419,40 +473,28 @@
     if(navigator.vibrate){try{navigator.vibrate(18);}catch(e){}}
     var cards=$('regionGrid').querySelectorAll('.region-card');
     for(var i=0;i<cards.length;i++)cards[i].disabled=true;
-    REGIONS.forEach(function(r,idx){if(r.key===key) cards[idx].classList.add('picked');});
+    REGIONS.forEach(function(r,idx){if(r.key===key)cards[idx].classList.add('picked');});
     setTimeout(showResult,600);
   }
 
-  function computeScores(){
-    scores={};KEYS.forEach(function(k){scores[k]=0;});
-    answers.forEach(function(s){if(s)scores[s]++;});
-  }
-  function getRanked(){
-    return KEYS.slice().sort(function(a,b){return scores[b]-scores[a];});
-  }
+  function computeScores(){scores={};KEYS.forEach(function(k){scores[k]=0;});answers.forEach(function(s){if(s)scores[s]++;});}
+  function getRanked(){return KEYS.slice().sort(function(a,b){return scores[b]-scores[a];});}
 
   function renderResult(){
     var ranked=getRanked();
     var winner=ranked[0];
     var runner=(scores[ranked[1]]>=scores[winner]-1&&scores[ranked[1]]>0)?ranked[1]:null;
     var s=SECTORS[LANG][winner];
-
     setMood(winner);playMainVideo(winner);
-
     var rv=$('rVideo'),ri=$('rImg');
     ri.src=BIG_PHOTO[winner];ri.alt=s.name;ri.style.display='block';rv.style.display='none';
-    loadVideo(rv,VIDEOS[winner],function(ok){
-      if(ok){rv.style.display='block';setTimeout(function(){ri.style.display='none';},400);}
-    });
-
+    loadVideo(rv,VIDEOS[winner],function(ok){if(ok){rv.style.display='block';setTimeout(function(){ri.style.display='none';},400);}});
     $('rTitle').textContent=s.name;
     $('rTagline').textContent=s.tagline;
     $('rDesc').textContent=s.desc;
-
     var ch=$('rChips');ch.innerHTML='';
     s.careers.forEach(function(c){var e=document.createElement('span');e.className='chip';
       e.style.setProperty('--halo',COLOR[winner]);e.textContent=c;ch.appendChild(e);});
-
     var rE=$('rRunner');
     if(runner){rE.innerHTML=Tf('runnerUp',{name:SECTORS[LANG][runner].name});rE.hidden=false;}
     else rE.hidden=true;
@@ -475,78 +517,58 @@
     var rd=REGION_DATA[selectedRegion]||{};
     var regionName='';
     REGIONS.forEach(function(r){if(r.key===selectedRegion)regionName=r.name[LANG];});
-
     var html='';
-    html+='<div class="guide-hero">';
-    html+='<span class="big-emoji">'+g.emoji+'</span>';
+    html+='<div class="guide-hero"><span class="big-emoji">'+g.emoji+'</span>';
     html+='<h2>'+g.title[LANG]+'</h2>';
-    html+='<p class="sub">'+Tf('gSub',{sector:SECTORS[LANG][winner].name,region:regionName})+'</p>';
-    html+='</div>';
-
+    html+='<p class="sub">'+Tf('gSub',{sector:SECTORS[LANG][winner].name,region:regionName})+'</p></div>';
     html+='<div class="section"><h3><span class="ico">🎯</span> '+T('gWhy')+'</h3><ul class="reason-list">';
-    g.why[LANG].forEach(function(w,i){
-      html+='<li><span class="num">'+(i+1)+'</span><span>'+w+'</span></li>';
-    });
+    g.why[LANG].forEach(function(w,i){html+='<li><span class="num">'+(i+1)+'</span><span>'+w+'</span></li>';});
     html+='</ul></div>';
-
     html+='<div class="section"><h3><span class="ico">📈</span> '+T('gStats')+'</h3><div class="stat-grid">';
-    g.stats.forEach(function(s){
-      html+='<div class="stat-box"><span class="num">'+s.n+'</span><span class="lbl">'+s.l[LANG]+'</span></div>';
-    });
+    g.stats.forEach(function(s){html+='<div class="stat-box"><span class="num">'+s.n+'</span><span class="lbl">'+s.l[LANG]+'</span></div>';});
     html+='</div></div>';
-
     if(rd[winner]){
       html+='<div class="section"><h3><span class="ico">📍</span> '+Tf('gOpp',{region:regionName})+'</h3>';
       html+='<div class="opp-card"><div class="title"><span class="dot"></span> '+SECTORS[LANG][winner].name+' · '+regionName+'</div>';
-      html+='<div class="detail">'+rd[winner][LANG]+'</div>';
-      html+='<div class="tags">';
+      html+='<div class="detail">'+rd[winner][LANG]+'</div><div class="tags">';
       SECTORS[LANG][winner].careers.forEach(function(c){html+='<span class="tag">'+c+'</span>';});
       html+='</div></div></div>';
     }
-
     html+='<div class="section"><h3><span class="ico">🚀</span> '+T('gAction')+'</h3><div class="action-list">';
     g.actions.forEach(function(a,i){
       html+='<div class="action-step"><div class="step-num">'+(i+1)+'</div><div class="content">';
-      html+='<div class="title">'+a.t[LANG]+'</div>';
-      html+='<div class="detail">'+a.d[LANG]+'</div>';
-      html+='<a class="link" href="'+a.u+'" target="_blank" rel="noopener">'+a.l+' ←</a>';
-      html+='</div></div>';
+      html+='<div class="title">'+a.t[LANG]+'</div><div class="detail">'+a.d[LANG]+'</div>';
+      html+='<a class="link" href="'+a.u+'" target="_blank" rel="noopener">'+a.l+' ←</a></div></div>';
     });
     html+='</div></div>';
-
     html+='<div class="section"><h3><span class="ico">💡</span> '+T('gTip')+'</h3>';
-    html+='<p style="color:var(--muted);font-size:.95rem;line-height:1.7">'+T('gTipText')+'</p></div>';
-
+    html+='<p style="color:var(--muted);font-size:.94rem;line-height:1.7">'+T('gTipText')+'</p></div>';
     $('guideInner').innerHTML=html;
-
     var firstAction=g.actions[0];
     var stickyTxt=$('stickyTxt');
-    if(stickyTxt) stickyTxt.textContent=firstAction.t[LANG];
+    if(stickyTxt)stickyTxt.textContent=firstAction.t[LANG];
     $('stickyGo').textContent=T('stickyGo');
     $('stickyBar').onclick=function(){window.open(firstAction.u,'_blank');};
-
     $('guidePage').classList.add('active');
     document.body.style.overflow='hidden';
     $('guidePage').scrollTop=0;
   }
 
-  function closeGuide(){
-    $('guidePage').classList.remove('active');
-    document.body.style.overflow='';
-  }
+  function closeGuide(){$('guidePage').classList.remove('active');document.body.style.overflow='';}
 
-  function launchConfetti(accent){
+  function launchConfetti(accent,count){
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    var colors=[accent,'#D4A017','#00664A','#fff','#FFE08A'];
+    count=count||70;
+    var colors=[accent,'#D4A017','#00E6A6','#fff','#FFE08A'];
     var l=$('confetti');
-    for(var i=0;i<70;i++){
+    for(var i=0;i<count;i++){
       var p=document.createElement('i');
       p.style.left=Math.random()*100+'vw';p.style.background=colors[i%colors.length];
       p.style.animationDuration=(2.4+Math.random()*1.8)+'s';
       p.style.animationDelay=(Math.random()*.6)+'s';
       p.style.borderRadius=Math.random()>.5?'50%':'2px';
       l.appendChild(p);
-      (function(el){setTimeout(function(){try{el.remove();}catch(e){}},4800);})(p);
+      (function(el){setTimeout(function(){try{el.remove();}catch(e){}},5000);})(p);
     }
   }
 
@@ -556,11 +578,10 @@
       if(last&&SECTORS[LANG][last]){
         $('lastText').innerHTML=Tf('lastResult',{name:SECTORS[LANG][last].name});
         $('lastBanner').hidden=false;
-      } else $('lastBanner').hidden=true;
+      }else $('lastBanner').hidden=true;
     }catch(e){}
   }
 
-  /* ==================== PDF REPORT ==================== */
   function buildPdfHtml(){
     var winner=getRanked()[0];
     var sector=SECTORS[LANG][winner];
@@ -680,12 +701,14 @@
       reportWindow.close();
       btn.textContent=T('pdfError');
       setTimeout(function(){btn.textContent=original;btn.disabled=false;},2200);
-    }
-  }
+    }  }
 
   function on(id,ev,fn){var el=document.getElementById(id);if(!el)return;el.addEventListener(ev,function(e){
     try{fn(e);}catch(err){console.error(err);}});}
 
+  /* ✅ welcomeEnter → screen-start */
+  on('welcomeEnter','click',function(){ showScreen('screen-start'); });
+  on('homeBtn','click',goHome);
   on('langAr','click',function(){setLang('ar');});
   on('langEn','click',function(){setLang('en');});
   on('startBtn','click',startQuiz);
@@ -698,7 +721,15 @@
   try{
     applyLang();
     playMainVideo('tech');
-    setTimeout(function(){countTo($('s1'),6,1300);countTo($('s2'),10,1300);countTo($('s3'),60,1300);},1100);
+    setTimeout(function(){
+      var els=document.querySelectorAll('.wv-stat b[data-count]');
+      for(var i=0;i<els.length;i++){
+        (function(el,idx){
+          setTimeout(function(){countTo(el,parseInt(el.getAttribute('data-count'),10),1400);},idx*200);
+        })(els[i],i);
+      }
+    },700);
+    setTimeout(function(){countTo($('s1'),7,1300);countTo($('s2'),10,1300);countTo($('s3'),60,1300);},1100);
     console.log('✓ Ready · Lang:',LANG);
   }catch(e){console.error(e);}
 })();

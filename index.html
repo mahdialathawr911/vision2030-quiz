@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>اكتشف مسارك · رؤية 2030</title>
-<meta name="description" content="اختبار تفاعلي لاكتشاف المسار المهني الأنسب لك بين 6 قطاعات رؤية 2030.">
+<meta name="description" content="اختبار تفاعلي لاكتشاف المسار المهني الأنسب لك بين 7 قطاعات رؤية 2030.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,7 @@
 
 <div class="bg-stage">
   <div class="bg-grad"></div>
+  <div class="bg-aura" id="bgAura"></div>
   <video class="bg-video" id="bgVideoMain" muted loop playsinline preload="metadata"></video>
   <div class="bg-tint" id="bgTint"></div>
   <div class="bg-grain"></div>
@@ -25,9 +26,16 @@
 
 <div class="app">
   <header class="topbar">
-    <div class="logo">
-      <div class="logo-mark">ر</div>
-      <div class="logo-text">رؤية <span>2030</span></div>
+    <div class="topbar-start">
+      <button class="home-btn" id="homeBtn" type="button" aria-label="العودة للرئيسية">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>
+        </svg>
+      </button>
+      <div class="logo">
+        <div class="logo-mark">ر</div>
+        <div class="logo-text">رؤية <span>2030</span></div>
+      </div>
     </div>
     <div class="lang-toggle" role="group">
       <button class="lang-btn" id="langAr" aria-pressed="true" type="button">ع</button>
@@ -36,73 +44,202 @@
   </header>
 
   <main>
-    <section class="screen active" id="screen-start">
+    <!-- WELCOME -->
+    <section class="screen active" id="screen-welcome">
+      <div class="wv">
+        <div class="wv-hero">
+          <video id="heroVideo" muted loop playsinline autoplay preload="auto"
+            poster="https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=800&q=80">
+            <source src="https://videos.pexels.com/video-files/2098989/2098989-hd_1920_1080_30fps.mp4" type="video/mp4">
+            <source src="https://videos.pexels.com/video-files/2611250/2611250-hd_1920_1080_30fps.mp4" type="video/mp4">
+          </video>
+          <div class="wv-hero-scrim"></div>
+          <div class="wv-hero-vignette"></div>
+          <div class="wv-hero-dust" id="heroDust"></div>
+          <div class="wv-hero-body">
+            <div class="wv-eyebrow" data-i18n="wvEyebrow">رؤية السعودية 2030</div>
+            <h1 class="wv-title"><span data-i18n="wvTitleA">رحلتك نحو</span><br><span class="grad" data-i18n="wvTitleB">مستقبلك</span></h1>
+            <p class="wv-tag" data-i18n="wvTag">خمس خطوات بسيطة تفصلك عن اكتشاف المسار الذي ينبض قلبه معك.</p>
+          </div>
+        </div>
+
+        <div class="wv-strip">
+          <div class="wv-stat"><b data-count="7">0</b><small data-i18n="wvS1">قطاعات</small></div>
+          <div class="wv-stat"><b data-count="10">0</b><small data-i18n="wvS2">أسئلة</small></div>
+          <div class="wv-stat"><b data-count="60">0</b><small data-i18n="wvS3">ثانية</small></div>
+        </div>
+
+        <div class="wv-journey">
+          <div class="wv-jlabel"><span class="live-dot"></span><span data-i18n="wvJourneyLabel">رحلتك خطوة بخطوة</span></div>
+
+          <div class="jv-row right first" style="--d:0">
+            <div class="jv-card">
+              <div class="jv-photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200&q=80" alt=""><span class="jv-num">01</span></div>
+              <div class="jv-text"><div class="jv-t" data-i18n="j1T">أنت الآن هنا</div><div class="jv-d" data-i18n="j1D">في بداية طريقك نحو المستقبل</div></div>
+            </div>
+          </div>
+
+          <div class="jv-conn" style="--d:0">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="beam1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FFD76E" stop-opacity="0"/>
+                  <stop offset=".4" stop-color="#FFD76E" stop-opacity=".9"/>
+                  <stop offset=".6" stop-color="#FFE9A8" stop-opacity="1"/>
+                  <stop offset="1" stop-color="#FFD76E" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="glow1"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path id="path1" d="M 78 8 Q 78 50 22 92"/>
+              </defs>
+              <use href="#path1" stroke="url(#beam1)" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <use href="#path1" stroke="#FFE9A8" stroke-width=".6" fill="none" opacity=".7" filter="url(#glow1)"/>
+              <circle r="2" fill="#FFF" filter="url(#glow1)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path1"/></animateMotion><animate attributeName="opacity" values="0;1;1;1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+              <circle r="4" fill="#FFD76E" opacity=".35" filter="url(#glow1)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path1"/></animateMotion><animate attributeName="opacity" values="0;.5;.5;.5;0" dur="1.8s" repeatCount="indefinite"/></circle>
+            </svg>
+          </div>
+
+          <div class="jv-row left" style="--d:1">
+            <div class="jv-card">
+              <div class="jv-photo"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=200&q=80" alt=""><span class="jv-num">02</span></div>
+              <div class="jv-text"><div class="jv-t" data-i18n="j2T">تكتشف نفسك</div><div class="jv-d" data-i18n="j2D">نفهم ميولك واهتماماتك</div></div>
+            </div>
+          </div>
+
+          <div class="jv-conn" style="--d:1">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="beam2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD76E" stop-opacity="0"/><stop offset=".4" stop-color="#FFD76E" stop-opacity=".9"/><stop offset=".6" stop-color="#FFE9A8" stop-opacity="1"/><stop offset="1" stop-color="#FFD76E" stop-opacity="0"/></linearGradient>
+                <filter id="glow2"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path id="path2" d="M 22 8 Q 22 50 78 92"/>
+              </defs>
+              <use href="#path2" stroke="url(#beam2)" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <use href="#path2" stroke="#FFE9A8" stroke-width=".6" fill="none" opacity=".7" filter="url(#glow2)"/>
+              <circle r="2" fill="#FFF" filter="url(#glow2)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path2"/></animateMotion><animate attributeName="opacity" values="0;1;1;1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+              <circle r="4" fill="#FFD76E" opacity=".35" filter="url(#glow2)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path2"/></animateMotion><animate attributeName="opacity" values="0;.5;.5;.5;0" dur="1.8s" repeatCount="indefinite"/></circle>
+            </svg>
+          </div>
+
+          <div class="jv-row right" style="--d:2">
+            <div class="jv-card">
+              <div class="jv-photo"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&q=80" alt=""><span class="jv-num">03</span></div>
+              <div class="jv-text"><div class="jv-t" data-i18n="j3T">تحدد مسارك</div><div class="jv-d" data-i18n="j3D">من بين 7 قطاعات واعدة</div></div>
+            </div>
+          </div>
+
+          <div class="jv-conn" style="--d:2">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="beam3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD76E" stop-opacity="0"/><stop offset=".4" stop-color="#FFD76E" stop-opacity=".9"/><stop offset=".6" stop-color="#FFE9A8" stop-opacity="1"/><stop offset="1" stop-color="#FFD76E" stop-opacity="0"/></linearGradient>
+                <filter id="glow3"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path id="path3" d="M 78 8 Q 78 50 22 92"/>
+              </defs>
+              <use href="#path3" stroke="url(#beam3)" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <use href="#path3" stroke="#FFE9A8" stroke-width=".6" fill="none" opacity=".7" filter="url(#glow3)"/>
+              <circle r="2" fill="#FFF" filter="url(#glow3)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path3"/></animateMotion><animate attributeName="opacity" values="0;1;1;1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+              <circle r="4" fill="#FFD76E" opacity=".35" filter="url(#glow3)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path3"/></animateMotion><animate attributeName="opacity" values="0;.5;.5;.5;0" dur="1.8s" repeatCount="indefinite"/></circle>
+            </svg>
+          </div>
+
+          <div class="jv-row left" style="--d:3">
+            <div class="jv-card">
+              <div class="jv-photo"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&q=80" alt=""><span class="jv-num">04</span></div>
+              <div class="jv-text"><div class="jv-t" data-i18n="j4T">تحصل على دليلك</div><div class="jv-d" data-i18n="j4D">فرص حقيقية وبرامج مجانية</div></div>
+            </div>
+          </div>
+
+          <div class="jv-conn" style="--d:3">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="beam4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD76E" stop-opacity="0"/><stop offset=".4" stop-color="#FFD76E" stop-opacity=".9"/><stop offset=".6" stop-color="#FFE9A8" stop-opacity="1"/><stop offset="1" stop-color="#FFD76E" stop-opacity="0"/></linearGradient>
+                <filter id="glow4"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path id="path4" d="M 22 8 Q 22 50 78 92"/>
+              </defs>
+              <use href="#path4" stroke="url(#beam4)" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <use href="#path4" stroke="#FFE9A8" stroke-width=".6" fill="none" opacity=".7" filter="url(#glow4)"/>
+              <circle r="2" fill="#FFF" filter="url(#glow4)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path4"/></animateMotion><animate attributeName="opacity" values="0;1;1;1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+              <circle r="4" fill="#FFD76E" opacity=".35" filter="url(#glow4)"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#path4"/></animateMotion><animate attributeName="opacity" values="0;.5;.5;.5;0" dur="1.8s" repeatCount="indefinite"/></circle>
+            </svg>
+          </div>
+
+          <div class="jv-row right" style="--d:4">
+            <div class="jv-card">
+              <div class="jv-photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80" alt=""><span class="jv-num">05</span></div>
+              <div class="jv-text"><div class="jv-t" data-i18n="j5T">تحمّل تقريرك</div><div class="jv-d" data-i18n="j5D">PDF كامل قابل للمشاركة</div></div>
+            </div>
+          </div>
+
+          <div class="jv-conn final" style="--d:4">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="beamG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00E6A6" stop-opacity="0"/><stop offset=".4" stop-color="#00E6A6" stop-opacity=".9"/><stop offset=".6" stop-color="#00FFB7" stop-opacity="1"/><stop offset="1" stop-color="#00E6A6" stop-opacity="0"/></linearGradient>
+                <filter id="glowG"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path id="pathG" d="M 78 8 Q 65 55 50 92"/>
+              </defs>
+              <use href="#pathG" stroke="url(#beamG)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <use href="#pathG" stroke="#00FFB7" stroke-width=".8" fill="none" opacity=".8" filter="url(#glowG)"/>
+              <circle r="2.5" fill="#FFF" filter="url(#glowG)"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#pathG"/></animateMotion><animate attributeName="opacity" values="0;1;1;1;0" dur="1.6s" repeatCount="indefinite"/></circle>
+              <circle r="5" fill="#00E6A6" opacity=".4" filter="url(#glowG)"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#pathG"/></animateMotion><animate attributeName="opacity" values="0;.6;.6;.6;0" dur="1.6s" repeatCount="indefinite"/></circle>
+            </svg>
+          </div>
+
+          <div class="jv-row final" style="--d:5">
+            <button class="jv-final" id="welcomeEnter" type="button">
+              <div class="jv-final-orb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+              <div class="jv-final-text">
+                <div class="jv-final-t" data-i18n="jCtaT">ابدأ الرحلة الآن</div>
+                <div class="jv-final-d" data-i18n="jCtaD">دقيقة واحدة وتكتشف مسارك</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="wv-foot"><span class="dot-pulse"></span><span data-i18n="journeyFoot">بدون تسجيل · بدون بيانات شخصية · أقل من دقيقة</span></div>
+      </div>
+    </section>
+
+    <!-- START -->
+    <section class="screen" id="screen-start">
       <div class="badge-row">
         <div class="badge"><span class="dot"></span> <span data-i18n="b1">10 أسئلة</span></div>
         <div class="badge"><span class="dot"></span> <span data-i18n="b2">+ سؤال منطقتك</span></div>
         <div class="badge"><span class="dot"></span> <span data-i18n="b3">دليل مسار كامل</span></div>
       </div>
       <h1 class="hero-title" data-i18n="heroTitle">اكتشف مسارك المستقبلي</h1>
-      <p class="hero-sub" data-i18n="heroSub">6 قطاعات تقود رؤية 2030. أجب بصدق، حدّد منطقتك، واحصل على دليل مخصص بالفرص والبرامج.</p>
+      <p class="hero-sub" data-i18n="heroSub">7 قطاعات تقود رؤية 2030. أجب بصدق، حدّد منطقتك، واحصل على دليل مخصص.</p>
       <div class="mosaic" id="mosaic"></div>
       <div class="stats">
         <div class="stat"><b id="s1">0</b><small data-i18n="s1">قطاعات</small></div>
         <div class="stat"><b id="s2">0</b><small data-i18n="s2">أسئلة</small></div>
         <div class="stat"><b id="s3">0</b><small data-i18n="s3">ثانية</small></div>
       </div>
-      <button class="cta" id="startBtn" type="button">
-        <span data-i18n="startBtn">ابدأ الرحلة</span><span>←</span>
-      </button>
+      <button class="cta" id="startBtn" type="button"><span data-i18n="startBtn">ابدأ الرحلة</span><span>←</span></button>
       <p class="meta" data-i18n="meta">بدون تسجيل · بدون بيانات شخصية</p>
-      <div class="last-banner" id="lastBanner" hidden>
-        <span class="spot"></span><span id="lastText"></span>
-      </div>
+      <div class="last-banner" id="lastBanner" hidden><span class="spot"></span><span id="lastText"></span></div>
     </section>
 
+    <!-- QUIZ -->
     <section class="screen" id="screen-quiz">
       <div class="quiz-head">
         <div class="ring">
-          <svg viewBox="0 0 64 64">
-            <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#00664A"/><stop offset="1" stop-color="#D4A017"/>
-            </linearGradient></defs>
-            <circle class="track" cx="32" cy="32" r="28"/>
-            <circle class="progress" id="ringProgress" cx="32" cy="32" r="28"/>
-          </svg>
+          <svg viewBox="0 0 64 64"><defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00664A"/><stop offset="1" stop-color="#D4A017"/></linearGradient></defs><circle class="track" cx="32" cy="32" r="28"/><circle class="progress" id="ringProgress" cx="32" cy="32" r="28"/></svg>
           <div class="ring-num"><span id="ringNum">1</span><small>/10</small></div>
         </div>
-        <div class="quiz-meta">
-          <div class="step" id="stepLabel"></div>
-          <div class="cheer" id="cheer"></div>
-        </div>
+        <div class="quiz-meta"><div class="step" id="stepLabel"></div><div class="cheer" id="cheer"></div></div>
       </div>
-      <div class="q-card" id="qCard">
-        <h2 class="q-text" id="qText"></h2>
-        <div class="options" id="options"></div>
-      </div>
+      <div class="q-card" id="qCard"><h2 class="q-text" id="qText"></h2><div class="options" id="options"></div></div>
       <button class="back" id="backBtn" type="button" data-i18n="backBtn">↩ رجوع</button>
     </section>
 
+    <!-- REGION -->
     <section class="screen" id="screen-region">
       <div class="quiz-head">
-        <div class="ring">
-          <svg viewBox="0 0 64 64">
-            <circle class="track" cx="32" cy="32" r="28"/>
-            <circle class="progress" cx="32" cy="32" r="28" style="stroke-dashoffset:0"/>
-          </svg>
-          <div class="ring-num"><span>✓</span></div>
-        </div>
-        <div class="quiz-meta">
-          <div class="step" data-i18n="regionStep">الخطوة الأخيرة</div>
-          <div class="cheer" data-i18n="regionCheer">وين تشوف نفسك؟ 🗺️</div>
-        </div>
+        <div class="ring"><svg viewBox="0 0 64 64"><circle class="track" cx="32" cy="32" r="28"/><circle class="progress" cx="32" cy="32" r="28" style="stroke-dashoffset:0"/></svg><div class="ring-num"><span>✓</span></div></div>
+        <div class="quiz-meta"><div class="step" data-i18n="regionStep">الخطوة الأخيرة</div><div class="cheer" data-i18n="regionCheer">وين تشوف نفسك؟ 🗺️</div></div>
       </div>
-      <div class="q-card">
-        <h2 class="q-text" data-i18n="regionTitle">اختر المنطقة اللي تحب تشتغل وتعيش فيها:</h2>
-        <div class="region-grid" id="regionGrid"></div>
-      </div>
+      <div class="q-card"><h2 class="q-text" data-i18n="regionTitle">اختر المنطقة اللي تحب تشتغل وتعيش فيها:</h2><div class="region-grid" id="regionGrid"></div></div>
     </section>
 
+    <!-- RESULT -->
     <section class="screen" id="screen-result">
       <div class="reveal-ring" id="revealRing" hidden></div>
       <div class="result-card">
@@ -136,10 +273,7 @@
 <div class="guide-page" id="guidePage">
   <button class="guide-close" id="guideClose" type="button">✕</button>
   <div class="guide-inner" id="guideInner"></div>
-  <button class="sticky-bar" id="stickyBar" type="button">
-    <span class="txt" id="stickyTxt"></span>
-    <span class="go-btn" id="stickyGo"></span>
-  </button>
+  <button class="sticky-bar" id="stickyBar" type="button"><span class="txt" id="stickyTxt"></span><span class="go-btn" id="stickyGo"></span></button>
 </div>
 
 <div class="confetti" id="confetti"></div>

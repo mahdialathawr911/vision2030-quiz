@@ -1,0 +1,35 @@
+{
+  "license": "https://www.pexels.com/license/",
+  "downloaded": "2026-10-02",
+  "note": "Muted decorative sector loops. Local MP4s are the primary card media; static images load only as error fallbacks. Curated for UI use; review before public release for logos, people, and project context.",
+  "clips": {
+    "tourism": {
+      "source": "https://www.pexels.com/video/thailand-4133023/",
+      "file": "tourism.mp4"
+    },
+    "tech": {
+      "source": "https://www.pexels.com/video/software-developer-18382358/",
+      "file": "tech.mp4"
+    },
+    "health": {
+      "source": "https://www.pexels.com/video/doctor-and-patients-on-hospital-hallway-6129933/",
+      "file": "health.mp4"
+    },
+    "entertainment": {
+      "source": "https://www.pexels.com/video/people-on-concert-13054630/",
+      "file": "entertainment.mp4"
+    },
+    "education": {
+      "source": "https://www.pexels.com/video/students-studying-in-the-classroom-8342354/",
+      "file": "education.mp4"
+    },
+    "finance": {
+      "source": "https://www.pexels.com/video/stock-market-graph-14003933/",
+      "file": "finance.mp4"
+    },
+    "engineering": {
+      "source": "https://www.pexels.com/video/manufacturing-852341/",
+      "file": "engineering.mp4"
+    }
+  }
+}
