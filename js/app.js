@@ -8,15 +8,15 @@
     ar:{
       title:'اكتشف مسارك · رؤية 2030',
       wvEyebrow:'رؤية السعودية 2030',
-      wvTitleA:'رحلتك نحو',wvTitleB:'مستقبلك',
-      wvTag:'خمس خطوات بسيطة تفصلك عن اكتشاف المسار الذي ينبض قلبه معك.',
+      wvTitleA:'اكتشف مسارك',wvTitleB:'المستقبلي',
+      wvTag:'أجب عن 10 أسئلة بسيطة لتكتشف المجال الذي يناسبك.',
       wvS1:'قطاعات',wvS2:'أسئلة',wvS3:'ثانية',
-      wvJourneyLabel:'رحلتك خطوة بخطوة',
-      j1T:'أنت الآن هنا',j1D:'في بداية طريقك نحو المستقبل',
-      j2T:'تكتشف نفسك',j2D:'نفهم ميولك واهتماماتك',
-      j3T:'تحدد مسارك',j3D:'من بين 7 قطاعات واعدة',
-      j4T:'تحصل على دليلك',j4D:'فرص حقيقية وبرامج مجانية',
-      j5T:'تحمّل تقريرك',j5D:'PDF كامل قابل للمشاركة',
+      wvJourneyLabel:'كيف تعمل الرحلة',
+      j1T:'أجب عن الأسئلة',j1D:'نفهم ميولك واهتماماتك',
+      j2T:'اختر منطقتك',j2D:'لتظهر لك فرص أقرب إليك',
+      j3T:'احصل على دليلك',j3D:'مسار مهني وفرص عملية قابلة للطباعة',
+      j4T:'',j4D:'',
+      j5T:'',j5D:'',
       jCtaT:'ابدأ الرحلة الآن',jCtaD:'دقيقة واحدة وتكتشف مسارك',
       journeyFoot:'بدون تسجيل · بدون بيانات شخصية · أقل من دقيقة',
       heroTitle:'اكتشف مسارك المستقبلي',
@@ -47,15 +47,15 @@
     en:{
       title:'Discover Your Path · Vision 2030',
       wvEyebrow:'Saudi Vision 2030',
-      wvTitleA:'Your journey toward',wvTitleB:'your future',
-      wvTag:'Five simple steps to discover the path that resonates with you.',
+      wvTitleA:'Discover your',wvTitleB:'future path',
+      wvTag:'Answer 10 simple questions to find the sector that fits you.',
       wvS1:'sectors',wvS2:'questions',wvS3:'seconds',
-      wvJourneyLabel:'Your journey step by step',
-      j1T:'You are here',j1D:'At the start of your road to the future',
-      j2T:'Discover yourself',j2D:'We learn your interests',
-      j3T:'Find your path',j3D:'Among 7 promising sectors',
-      j4T:'Get your guide',j4D:'Real opportunities and free programs',
-      j5T:'Download your report',j5D:'Full shareable PDF',
+      wvJourneyLabel:'How it works',
+      j1T:'Answer the questions',j1D:'We learn your interests',
+      j2T:'Choose your region',j2D:'See opportunities closer to you',
+      j3T:'Receive your guide',j3D:'A printable career path and practical opportunities',
+      j4T:'',j4D:'',
+      j5T:'',j5D:'',
       jCtaT:'Start the journey now',jCtaD:'One minute to discover your path',
       journeyFoot:'No sign-up · No personal data · Under a minute',
       heroTitle:'Discover Your Future Path',
@@ -88,61 +88,14 @@
   function Tf(k,v){var s=I18N[LANG][k];if(typeof s!=='string')return s;
     return s.replace(/\{(\w+)\}/g,function(_,n){return v[n]!=null?v[n]:'';});}
 
-  var VIDEOS = {
-    tourism:[
-      'https://videos.pexels.com/video-files/2169880/2169880-sd_640_360_30fps.mp4',
-      'https://videos.pexels.com/video-files/857195/857195-sd_640_360_25fps.mp4'
-    ],
-    tech:[
-      'https://videos.pexels.com/video-files/3129671/3129671-sd_640_360_30fps.mp4',
-      'https://videos.pexels.com/video-files/852421/852421-sd_640_360_30fps.mp4'
-    ],
-    health:[
-      'https://videos.pexels.com/video-files/4098993/4098993-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/3196036/3196036-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/4027609/4027609-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/3982240/3982240-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/5721935/5721935-sd_640_360_25fps.mp4'
-    ],
-    entertainment:[
-      'https://videos.pexels.com/video-files/2022395/2022395-sd_640_360_30fps.mp4',
-      'https://videos.pexels.com/video-files/1721294/1721294-sd_640_360_25fps.mp4'
-    ],
-    education:[
-      'https://videos.pexels.com/video-files/8088507/8088507-sd_640_360_30fps.mp4',
-      'https://videos.pexels.com/video-files/5199629/5199629-sd_640_360_30fps.mp4',
-      'https://videos.pexels.com/video-files/3205622/3205622-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/4125025/4125025-sd_640_360_25fps.mp4'
-    ],
-    finance:[
-      'https://videos.pexels.com/video-files/3121459/3121459-sd_640_360_24fps.mp4',
-      'https://videos.pexels.com/video-files/7578540/7578540-sd_640_360_30fps.mp4'
-    ],
-    engineering:[
-      'https://videos.pexels.com/video-files/4489758/4489758-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/855106/855106-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/3773486/3773486-sd_640_360_25fps.mp4',
-      'https://videos.pexels.com/video-files/3196181/3196181-sd_640_360_25fps.mp4'
-    ]
-  };
-
-  var PHOTO = {
-    tourism:'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&q=75&auto=format&fit=crop',
-    tech:'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=75&auto=format&fit=crop',
-    health:'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&q=75&auto=format&fit=crop',
-    entertainment:'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500&q=75&auto=format&fit=crop',
-    education:'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=75&auto=format&fit=crop',
-    finance:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=75&auto=format&fit=crop',
-    engineering:'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&q=75&auto=format&fit=crop'
-  };
-  var BIG_PHOTO = {
-    tourism:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1000&q=75&auto=format&fit=crop',
-    tech:'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=75&auto=format&fit=crop',
-    health:'https://images.unsplash.com/photo-1631815588090-d1bcbe9a8b2b?w=1000&q=75&auto=format&fit=crop',
-    entertainment:'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000&q=75&auto=format&fit=crop',
-    education:'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1000&q=75&auto=format&fit=crop',
-    finance:'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1000&q=75&auto=format&fit=crop',
-    engineering:'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=1000&q=75&auto=format&fit=crop'
+  var ASSETS = {
+    tourism:{image:'assets/images/sectors/tourism.jpg',video:'assets/media/sectors/tourism.mp4'},
+    tech:{image:'assets/images/sectors/tech.jpg',video:'assets/media/sectors/tech.mp4'},
+    health:{image:'assets/images/sectors/health.jpg',video:'assets/media/sectors/health.mp4'},
+    entertainment:{image:'assets/images/sectors/entertainment.jpg',video:'assets/media/sectors/entertainment.mp4'},
+    education:{image:'assets/images/sectors/education.jpg',video:'assets/media/sectors/education.mp4'},
+    finance:{image:'assets/images/sectors/finance.jpg',video:'assets/media/sectors/finance.mp4'},
+    engineering:{image:'assets/images/sectors/engineering.svg',video:'assets/media/sectors/engineering.mp4'}
   };
 
   var KEYS=['tourism','tech','health','entertainment','education','finance','engineering'];
@@ -246,25 +199,47 @@
   var currentScreenId='screen-welcome';
   var $=function(id){return document.getElementById(id)};
 
-  function loadVideo(el,urls,cb){
-    if(!el)return;var i=0;
-    function next(){
-      if(i>=urls.length){el.style.display='none';if(cb)cb(false);return;}
-      el.src=urls[i++];el.load();
+  function canUseMotion(){
+    return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function loadVideo(el,src,cb){
+    if(!el||!src){if(cb)cb(false);return;}
+
+    var settled=false;
+    function finish(ok){
+      if(settled)return;
+      settled=true;
+      clearTimeout(timer);
+      if(cb)cb(ok);
     }
-    el.oncanplay=function(){
-      var p=el.play();if(p&&p.catch)p.catch(function(){});
-      if(cb)cb(true);
+
+    el.onloadeddata=function(){
+      if(canUseMotion()){
+        var p=el.play();
+        if(p&&p.catch)p.catch(function(){});
+      }else el.pause();
+      finish(true);
     };
-    el.onerror=next;
-    var timer=setTimeout(next,6000);
-    el.addEventListener('canplay',function(){clearTimeout(timer);},{once:true});
-    next();
+    el.onerror=function(){finish(false);};
+    var timer=setTimeout(function(){finish(false);},12000);
+    el.src=src;
+    el.load();
   }
 
   function playMainVideo(sector){
-    var v=$('bgVideoMain');
-    loadVideo(v,VIDEOS[sector]||VIDEOS.tech,function(ok){if(ok)v.classList.add('active');});
+    var v=$('bgVideoMain'),asset=ASSETS[sector]||ASSETS.tech;
+    if(!canUseMotion()||!v)return;
+    if(v.dataset.sector===sector&&v.readyState>=2){
+      v.play().catch(function(){});
+      v.classList.add('active');
+      return;
+    }
+    v.dataset.sector=sector;
+    loadVideo(v,asset.video,function(ok){
+      if(ok)v.classList.add('active');
+      else v.classList.remove('active');
+    });
   }
 
   function setMood(sector){
@@ -298,8 +273,6 @@
   })();
 
   (function(){
-    var v=$('heroVideo');
-    if(v){v.play().catch(function(){});v.addEventListener('error',function(){v.style.display='none';},true);}
     var dust=$('heroDust');
     if(dust){
       for(var i=0;i<18;i++){
@@ -329,6 +302,13 @@
     target.classList.add('active');
     currentScreenId=id;
     updateHomeBtn();
+    setTimeout(function(){
+      var focusTarget=target.querySelector('.q-text, .result-title, #welcomeTitle');
+      if(focusTarget){
+        if(!focusTarget.hasAttribute('tabindex'))focusTarget.setAttribute('tabindex','-1');
+        focusTarget.focus({preventScroll:true});
+      }
+    },40);
   }
 
   function updateHomeBtn(){
@@ -376,18 +356,16 @@
     KEYS.forEach(function(k,i){
       var f=document.createElement('figure');f.className='tile';
       f.style.setProperty('--rot',rots[i]+'deg');
-      f.style.setProperty('--delay',(i*.28)+'s');
+      f.style.setProperty('--delay',(i*.14)+'s');
       f.style.setProperty('--halo',COLOR[k]);
       var img=document.createElement('img');
-      img.src=PHOTO[k];img.alt='';img.style.zIndex='0';
-      var v=document.createElement('video');
-      v.muted=true;v.loop=true;v.playsInline=true;v.preload='metadata';
-      v.setAttribute('muted','');v.setAttribute('playsinline','');
-      v.poster=PHOTO[k];v.style.opacity='0';v.style.transition='opacity .6s';
-      f.appendChild(img);f.appendChild(v);
+      img.src=ASSETS[k].image;
+      img.alt='';
+      img.loading=i>2?'lazy':'eager';
+      img.decoding='async';
+      f.appendChild(img);
       var c=document.createElement('figcaption');c.textContent=SECTORS[LANG][k].name;f.appendChild(c);
       m.appendChild(f);
-      setTimeout(function(){loadVideo(v,VIDEOS[k],function(ok){if(ok)v.style.opacity='1';});},i*220+400);
     });
   }
 
@@ -487,8 +465,13 @@
     var s=SECTORS[LANG][winner];
     setMood(winner);playMainVideo(winner);
     var rv=$('rVideo'),ri=$('rImg');
-    ri.src=BIG_PHOTO[winner];ri.alt=s.name;ri.style.display='block';rv.style.display='none';
-    loadVideo(rv,VIDEOS[winner],function(ok){if(ok){rv.style.display='block';setTimeout(function(){ri.style.display='none';},400);}});
+    ri.src=ASSETS[winner].image;ri.alt=s.name;ri.style.display='block';rv.style.display='none';
+    loadVideo(rv,ASSETS[winner].video,function(ok){
+      if(ok&&canUseMotion()){
+        rv.style.display='block';
+        setTimeout(function(){ri.style.display='none';},400);
+      }
+    });
     $('rTitle').textContent=s.name;
     $('rTagline').textContent=s.tagline;
     $('rDesc').textContent=s.desc;
@@ -706,12 +689,11 @@
   function on(id,ev,fn){var el=document.getElementById(id);if(!el)return;el.addEventListener(ev,function(e){
     try{fn(e);}catch(err){console.error(err);}});}
 
-  /* ✅ welcomeEnter → screen-start */
-  on('welcomeEnter','click',function(){ showScreen('screen-start'); });
+  /* Welcome CTA starts the quiz directly. */
+  on('welcomeEnter','click',startQuiz);
   on('homeBtn','click',goHome);
   on('langAr','click',function(){setLang('ar');});
   on('langEn','click',function(){setLang('en');});
-  on('startBtn','click',startQuiz);
   on('retakeBtn','click',startQuiz);
   on('backBtn','click',function(){if(cur>0){cur--;renderQuestion(true);}});
   on('discoverBtn','click',openGuide);
@@ -720,7 +702,6 @@
 
   try{
     applyLang();
-    playMainVideo('tech');
     setTimeout(function(){
       var els=document.querySelectorAll('.wv-stat b[data-count]');
       for(var i=0;i<els.length;i++){
@@ -729,7 +710,6 @@
         })(els[i],i);
       }
     },700);
-    setTimeout(function(){countTo($('s1'),7,1300);countTo($('s2'),10,1300);countTo($('s3'),60,1300);},1100);
     console.log('✓ Ready · Lang:',LANG);
   }catch(e){console.error(e);}
 })();
